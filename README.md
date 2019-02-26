@@ -3,13 +3,23 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
+|password|string|null: false,unique|
+|email-address|string|null: false,unique|
+
+### Association
+- belongs_to:profile
+
+## profileテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|user_id|integer|null: false|
 |name|string|null: false|
 |nickname|string|null: false|
-|password|string|null: false,unique|
 |birthdate|DATE|null: false|
 |postal_code|integer|null: false|
-|email-address|string|null: false,unique|
-|region_id|string|null: false,foreign_key: true|
+|prefecture|string|null: false|
 |municipality|string|
 |block|string|
 |evaluation|string|null: false|
@@ -24,6 +34,7 @@
 - has_many :items
 - has_many :item-comments
 - has_many :regions
+- has_many :users
 - has_one :trade
 - has_one :saler_user
 - has_one :perchaser_user
@@ -41,14 +52,14 @@
 |price|integer|null: false|
 |delivery_charge_burden|string|null: false|
 |days_up_to_delivery|string|null: false|
-|region_id|string|null: false,foreign_key: true|
+|prefecture|string|null: false|
 |user_id|integer|null: false,foreign_key: true|
 |category_id|string|null: false,foreign_key: true|
 |perchaser_user_id|integer|null: false,foreign_key: true|
 |saler_user_id|integer|null: false,foreign_key: true|
 
 ### Association
-- belongs_to :user
+- belongs_to :profile
 - belongs_to :category
 - belongs_to :brand
 - has_many   :regions
@@ -76,7 +87,7 @@
 |item_id|integer|null: false|
 
 ### Association
-- belongs_tp:users
+- belongs_tp:profile
 - belongs_to:item
 
 ## tradeテーブル
@@ -92,7 +103,7 @@
 |item_id|integer|null: false,foreign_key: true|
 
 ### Association
-- has_one  :user
+- has_one  :profile
 - has_one  :item
 - has_one  :saler_user
 - has_one  :percaser_user
@@ -108,7 +119,7 @@
 |name|string|null: false|
 
 ### Association
-- has_one :user
+- has_one :profile
 - has_one :trade
 - has_many:trade_comments
 
@@ -121,7 +132,7 @@
 |name|string|null: false|
 
 ### Association
-- has_one :user
+- has_one :profile
 - has_one :trade
 - has_many:trade_comments
 
@@ -137,17 +148,6 @@
 - belongs_to :trade
 - belongs_to :saler_user
 - belongs_to :percaser_user
-
-## regionテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false|
-|name|string|null: false,unique|
-
-### Association
-- belongs_to :user
-- belongs_to :item
 
 ## brandテーブル
 
