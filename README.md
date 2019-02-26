@@ -24,11 +24,8 @@
 |block|string|
 |evaluation|string|null: false|
 |sales_money|integer|null: false|
-|point|integer|null: false|
+|mercari-point|integer|null: false|
 |payment_methods|string|null: false|
-|Facebook|integer|
-|Twitter|integer|
-|Gmail|integer|
 
 ### Association
 - has_many :items
@@ -53,7 +50,7 @@
 |delivery_charge_burden|string|null: false|
 |days_up_to_delivery|string|null: false|
 |prefecture|string|null: false|
-|user_id|integer|null: false,foreign_key: true|
+|profile_id|integer|null: false,foreign_key: true|
 |category_id|string|null: false,foreign_key: true|
 |perchaser_user_id|integer|null: false,foreign_key: true|
 |saler_user_id|integer|null: false,foreign_key: true|
@@ -83,7 +80,7 @@
 |------|----|-------|
 |id|integer|null: false|
 |content|string|null: false|
-|user_id|integer|null: false|
+|profile_id|integer|null: false|
 |item_id|integer|null: false|
 
 ### Association
@@ -113,7 +110,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false,foreign_key: true|
+|profile_id|integer|null: false,foreign_key: true|
 |trade_id|integer|null: false,foreign_key: true|
 |temporary_sales_money|integer|null: false|
 |name|string|null: false|
@@ -127,7 +124,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false,foreign_key: true|
+|profile_id|integer|null: false,foreign_key: true|
 |trade_id|integer|null: false,foreign_key: true|
 |name|string|null: false|
 
