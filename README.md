@@ -87,7 +87,7 @@
 |item_id|integer|null: false|
 
 ### Association
-- belongs_tp:profile
+- belongs_to:profile
 - belongs_to:item
 
 ## tradeテーブル
