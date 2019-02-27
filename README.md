@@ -7,7 +7,7 @@
 |email-address|string|null: false,unique|
 
 ### Association
-- belongs_to:profile
+- has_one:profile
 
 ## profileテーブル
 
@@ -31,10 +31,10 @@
 - has_many :items
 - has_many :item-comments
 - has_many :regions
-- has_many :users
-- has_one :trade
-- has_one :saler_user
-- has_one :perchaser_user
+- belongs_to :users
+- belongs_to :trade
+- belongs_to :saler_user
+- belongs_to :perchaser_user
 
 
 ## itemテーブル
@@ -116,8 +116,8 @@
 |name|string|null: false|
 
 ### Association
-- has_one :profile
-- has_one :trade
+- belongs_to :profile
+- belongs_to :trade
 - has_many:trade_comments
 
 ## percaser_userテーブル
@@ -129,8 +129,8 @@
 |name|string|null: false|
 
 ### Association
-- has_one :profile
-- has_one :trade
+- belongs_to :profile
+- belongs_to :trade
 - has_many:trade_comments
 
 ## trade_commentテーブル
