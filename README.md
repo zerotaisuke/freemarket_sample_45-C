@@ -22,7 +22,9 @@
 |prefecture|string|null: false|
 |municipality|string|
 |block|string|
-|evaluation|string|null: false|
+|good_evaluation|integer|null: false|
+|normal_evaluation|integer|null: false|
+|bad_evaluation|integer|null: false|
 |sales_money|integer|null: false|
 |mercari-point|integer|null: false|
 |payment_methods|string|null: false|
