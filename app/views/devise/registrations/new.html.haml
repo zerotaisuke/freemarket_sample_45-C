@@ -16,10 +16,11 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation, autocomplete: "new-password"
-  = form.fields_for :profile do |f|
-    .filed
+  = form.fields_for :user do |f|
+    .field
       = f.label :name
       = f.text_field :name
+
 
   .actions
     = f.submit "Sign up"

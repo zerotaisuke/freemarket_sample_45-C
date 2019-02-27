@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_103616) do
+ActiveRecord::Schema.define(version: 2019_02_27_075656) do
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "image", null: false
+    t.string "status", null: false
+    t.string "item_status", null: false
+    t.integer "price", null: false
+    t.string "delivery_charge_burden", null: false
+    t.string "days_up_to_delivery", null: false
+    t.string "prefecture", null: false
+    t.integer "profile_id", null: false
+    t.integer "category_id", null: false
+    t.integer "perchaser_user_id", null: false
+    t.integer "saler_user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -24,6 +41,12 @@ ActiveRecord::Schema.define(version: 2019_02_26_103616) do
     t.integer "sales_money", default: 0, null: false
     t.integer "mercari_point", default: 0, null: false
     t.string "payment_methods", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "userinfos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
