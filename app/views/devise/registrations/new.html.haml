@@ -16,11 +16,39 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation, autocomplete: "new-password"
-  = form.fields_for :user do |f|
+  = f.fields_for :profile do |f|
     .field
       = f.label :name
+      %br
       = f.text_field :name
-
+    .field
+      = f.label :nickname
+      %br
+      = f.text_field :nickname
+    .field
+      = f.label :birthdate
+      %br
+      = f.text_field :birthdate
+    .field
+      = f.label :postal_code
+      %br
+      = f.text_field :postal_code
+    .field
+      = f.label :prefecture
+      %br
+      = f.text_field :prefecture
+    .field
+      = f.label :municipality
+      %br
+      = f.text_field :municipality
+    .field
+      = f.label :block
+      %br
+      = f.text_field :block
+    .field
+      = f.label :payment_methods
+      %br
+      = f.text_field :payment_methods
 
   .actions
     = f.submit "Sign up"
