@@ -21,10 +21,10 @@
 // ヘッダ全体とヘッダー上部
 header{
   @include height_width(100px,100vh);
-  @include padding_side(200px,200px);
+  @include padding_side(100px,100px);
 
 &__mercari {
-  @include height_width(148px,700px);
+  @include height_width(148px,100px);
   }
 
 .mercari_logo{
@@ -41,7 +41,7 @@ li{
 .cp_iptxt input[type='text'] {
   font: 15px/24px sans-serif;
   box-sizing: border-box;
-  width: 700px;
+  width:750px;
   padding: 0.3em;
   transition: 0.3s;
   letter-spacing: 1px;
@@ -53,28 +53,21 @@ li{
 
 // ヘッダーの下の部分
 .header__navi{
-  @include height_width(38px,900px);
+  @include height_width(38px,950px);
   font-size: 14px;
   padding-top: 15px;
   @include flex_start();
 
 &__left{
   @include flex_start();
-  width: 600px;
+   width: 600px;
+   padding-left: 50px;
 }
 &__right{
-  width: 400px;
-  display:flex;
-  flex-direction:row;
-  justify-content: flex-end;
-
+  // width: 350px;
   }
 }
 
-// 保留
-// .mypage_icon{
-//   height:32px;
-//   width:32px;
-//   border-radius: 50%;
-// }
-
+.top_banner__main_image{
+  width: 100%;
+}
