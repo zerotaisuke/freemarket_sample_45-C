@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
 
   resources :items, only: %i(index show)
-  devise_for :users, :controllers => {
- :registrations => 'users/registrations'
-}
   root 'items#index'
+  devise_for :users, :controllers => { :registrations => 'users/registrations' }
+
+
+
   resources :profiles, only: :index
+
+
+  namespace :admin do
+    resources :users, only: :index
+  end
+
+
 
 end
