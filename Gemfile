@@ -72,3 +72,4 @@ gem 'active_hash'
 gem 'devise'
 gem 'erd'
 gem 'haml-rails'
+gem "jquery-rails"
