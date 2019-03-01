@@ -6,228 +6,36 @@
 / = link_to 'ログイン', new_user_session_path
 
 .default-container
-  %header
-    .header__mercari
-      = image_tag "top_image/logo.svg", class: 'mercari_logo'
-      %li.cp_iptxt
-        %label.ef
-          %input{:placeholder => "何をお探しですか?", :type => "text"}/
-    .header__navi
-      .header__navi__left
-        %p カテゴリーから探す
-        %p ブランドから探す
-      %p
-        / = image_tag "top_image/logo.svg", class: 'mercari_logo'
-        マイページ
-      %p
-        %i.far.fa-bell>
-        お知らせ
-      %p
-        %i.fas.fa-check>
-        やることリスト
-.top_banner
-= image_tag "top_image/1.jpg", id: 'main_image', class: 'top_banner__main_image'
+  = render 'header'
 
-/ アイテム欄部分テンプレート化する
 .pickup_container
   %h3.pickup_container__message
-    ピックアップカテゴリー
+    ピックアップアイテム
   .new_pickup__category
-    %p.new_pickup__category__ladies_new__message
-      レディース新着アイテム
-    .new_pickup__category__ladies_new
-      .new_pickup__category__ladies_new__contents_box1
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box2
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box3
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box4
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
+    = render 'ladies'
 
   .new_pickup__category
-    %p.new_pickup__category__ladies_new__message
-      メンズ新着アイテム
-    .new_pickup__category__ladies_new
-      .new_pickup__category__ladies_new__contents_box1
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box2
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box3
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box4
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
+    = render 'mens'
 
   .new_pickup__category
-    %p.new_pickup__category__ladies_new__message
-      ベビー・キッズ 新着アイテム
-    .new_pickup__category__ladies_new
-      .new_pickup__category__ladies_new__contents_box1
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box2
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box3
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
-      .new_pickup__category__ladies_new__contents_box4
-        = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-        .item_box_body
-          .item_box_body__name
-            ズボン
-          .item_box_body__num
-            .item_box_body__num__price ¥11,111
-            .item_box_body__num__tax (税込)
-            %i.far.fa-heart 4
+    = render 'baby'
 
-.pickup__brand
-.new_item__brand1
-  .new_item__brand1__contents__contents_box1
-  .new_item__brand1__contents__contents_box2
-  .new_item__brand1__contents__contents_box3
-  .new_item__brand2
-    .new_item__brand2__contents__contents_box1
-    .new_item__brand2__contents__contents_box2
-    .new_item__brand2__contents__contents_box3
-  .new_item__brand3
-    .new_item__brand3__contents__contents_box1
-    .new_item__brand3__contents__contents_box2
-    .new_item__brand3__contents__contents_box3
-  .new_item__brand4
-    .new_item__brand4__contents__contents_box1
-    .new_item__brand4__contents__contents_box2
-    .new_item__brand4__contents__contents_box3
-%footer
-  .footer__top_banner
-    .footer__top_banner__mobile
-      = image_tag "top_image/download_content_pc.png", :size => "250x250"
+  .new_pickup__category
+    = render 'cosme'
 
-    %p.footer__top_banner__message
-      スマホでかんたんフリマアプリ
-      %br/
-      %span 今すぐ無料ダウンロード!
-    .mercari_logo_bottom
-      = image_tag "top_image/mercari_profile.png", class: 'mercari_radius'
-    .apple_logo_bottom
-      = image_tag "top_image/app-store.svg", class: 'apple_logo_bottom'
-    .google_logo_bottom
-      = image_tag "top_image/google-play.svg"
-  .footer__bottom__banner
-    .footer__bottom__banner__about_mercari
-      %p 会社概要（運営会社)
-      %p プライバシーポリシー
-      %p メルカリ利用規約
-      %p 有償ポイントに関する特約
-      %p あんしんスマホサポート制度に関する利用特約
-      %p コンプライアンスポリシー
-      %p 個人データの安全管理に係る基本方針
-      %p 特定商取引に関する表記
-      %p 資金決済法に基づく表示
-      %p 法令順守と犯罪抑止のために
-      %p 採用情報
-    .footer__bottom__banner__show_mercari
-      %p メルカリを見る
-      %p カテゴリー一覧
-      %p ブランド一覧
-      %p 出品地域一覧
-      %p 公式ブログ
-      %p 公式Twitter
-      %p 公式Facebook
-    .footer__bottom__banner__help_guide_mercari
-      %p ヘルプ＆ガイド
-      %p メルカリガイド
-      %p メルカリロゴ利用ガイドライン
-      %p お知らせ
-      %p らくらくメルカリ便とは
-      %p ゆうゆうメルカリ便とは
-      %p 大型らくらくメルカリ便とは
-      %p 車体取引ガイド
-      %p 返品・返金ポリシー
-      %p メルカリあんしん・あんぜん宣言！
-      %p 偽ブランド品撲滅への取り組み
-      %p メルカリボックス
-    .footer__bottom__banner__country_mercari
-      %p 国
-      %p United States
-      %p United Kingdom
-      %p 日本
-  .mercai_2019
-.sell_btn
-  %p.sell_btn__message
-    出品
-  %i.fas.fa-camera
+.pickup_container
+  %h3.pickup_container__message
+    ピックアップブランド
+  .new_pickup__category
+    = render 'chanel'
+
+  .new_pickup__category
+    = render 'louis'
+
+  .new_pickup__category
+    = render 'supreme'
+
+  .new_pickup__category
+    = render 'nike'
+
+= render 'footer'

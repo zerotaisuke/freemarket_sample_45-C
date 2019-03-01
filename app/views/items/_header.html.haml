@@ -1,0 +1,21 @@
+%header
+  .header__mercari
+    = image_tag "top_image/logo.svg", class: 'mercari_logo'
+    %li.cp_iptxt
+      %label.ef
+        %input{:placeholder => "何をお探しですか?", :type => "text"}/
+  .header__navi
+    .header__navi__left
+      %p カテゴリーから探す
+      %p ブランドから探す
+    %p
+      / = image_tag "top_image/logo.svg", class: 'mercari_logo'
+      マイページ
+    %p
+      %i.far.fa-bell>
+      お知らせ
+    %p
+      %i.fas.fa-check>
+      やることリスト
+.top_banner
+= image_tag "top_image/1.jpg", id: 'main_image', class: 'top_banner__main_image'

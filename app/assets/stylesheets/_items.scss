@@ -4,7 +4,7 @@
 .pickup_container{
 	background-color: $thin_gray;
   padding-top: 40px;
-  @include height_width(200vh,100%);
+  @include height_width(270vh,100%);
 
 &__message{
   text-align: center;
@@ -50,15 +50,13 @@ i.fas.fa-camera{
   }
 }
 
-
-
 /*レディースコンテンツ*/
-.new_pickup__category__ladies_new{
+.new_pickup__category__new{
   @include height_width(442px,950px);
   margin: 0 auto;
   @include flex();
 
-&__contents_box1{
+&__contents_box{
   background-color: $white;
   @include height_width(330px,213px);
   margin-top: 25px;
@@ -104,65 +102,3 @@ i.far.fa-heart{
      }
   }
 }
-
-
-
-.new_pickup__category__ladies_new__contents_box2{
-  background-color: $white;
-  @include height_width(330px,213px);
-  margin-top: 25px;
-}
-.new_pickup__category__ladies_new__contents_box3{
-  background-color: $white;
-  @include height_width(330px,213px);
-  margin-top: 25px;
-
-  }
-.new_pickup__category__ladies_new__contents_box4{
-  background-color: $white;
-  @include height_width(330px,213px);
-  margin-top: 25px;
-  }
-.item_box_body__num__price
-
-/*めんず
-*/
-.new_pickup__category__mens_new__message{
-  font-size: 22px;
-  text-align: center;
-  padding-top:38px;
-   color:$light_blue;
-}
-.new_pickup__category__mens_new{
-  background-color: $thin_gray;
-  @include height_width(442px,700px);
-  margin: 0 auto;
-}
-.new_pickup__category__mens_new__contents_box1{
-  background-color: $thin_gray;
-  @include height_width(300px,213px);
-  margin-top: 25px;
-}
-
-/*ベビー・キッズ*/
-.new_pickup__category__baby_kids_new{
-  background-color: $thin_gray;
-  @include height_width(300px,200px);
-  margin: 0 auto;
-}
-
-.new_pickup__category__baby_kids_new__message{
-  font-size: 22px;
-  text-align: center;
-  padding-top:38px;
-   color:$light_blue;
-}
-
-.new_pickup__category__baby_kids_new__contents_box1{
-  background-color: $thin_gray;
-  @include height_width(300px,213px);
-  margin-top: 25px;
-}
-
-
-

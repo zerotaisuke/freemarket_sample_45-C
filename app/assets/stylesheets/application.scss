@@ -2,7 +2,7 @@
 @import "./header";
 @import "./items";
 @import "./footer";
-
+@import "./mixin";
 
 @mixin height_width($height,$width){
   height: $height;
