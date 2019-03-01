@@ -30,6 +30,7 @@ header{
 .mercari_logo{
   @include height_width(40px,148px);
   padding-top:5px;
+
   }
 }
 
@@ -41,7 +42,7 @@ li{
 .cp_iptxt input[type='text'] {
   font: 15px/24px sans-serif;
   box-sizing: border-box;
-  width:750px;
+  width:950px;
   padding: 0.3em;
   transition: 0.3s;
   letter-spacing: 1px;
@@ -57,14 +58,17 @@ li{
   font-size: 14px;
   padding-top: 15px;
   @include flex_start();
+  padding-left: 95px;
 
 &__left{
-  @include flex_start();
-   width: 600px;
+  // @include flex_start();
+  @include flex();
+   width: 300px;
    padding-left: 50px;
 }
 &__right{
-  // width: 350px;
+  @include flex();
+  width: 650px;
   }
 }
 

@@ -6,16 +6,14 @@
         %input{:placeholder => "何をお探しですか?", :type => "text"}/
   .header__navi
     .header__navi__left
-      %p カテゴリーから探す
-      %p ブランドから探す
-    %p
-      / = image_tag "top_image/logo.svg", class: 'mercari_logo'
+      %li カテゴリーから探す
+      %li ブランドから探す
+    %li
       マイページ
-    %p
-      %i.far.fa-bell>
+      %i.far.fa-bell
       お知らせ
-    %p
-      %i.fas.fa-check>
+    %li
+      %i.fas.fa-check
       やることリスト
 .top_banner
 = image_tag "top_image/1.jpg", id: 'main_image', class: 'top_banner__main_image'
