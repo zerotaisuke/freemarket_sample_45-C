@@ -28,7 +28,12 @@
     .field
       = f.label :birthdate
       %br
-      = f.text_field :birthdate
+      = raw sprintf(f.date_select(:birthdate,
+                                  start_year: 1910,
+                                  end_year: Time.now.year,
+                                  use_month_numbers: true,
+                                  default: Date.new(2000, 1, 1),
+                                  date_separator: '%s'),'年','月') + '日'
     .field
       = f.label :postal_code
       %br
