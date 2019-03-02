@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -73,3 +74,16 @@ gem 'devise'
 gem 'erd'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'font-awesome-rails'
+gem 'recaptcha', require: "recaptcha/rails"
+gem 'gretel'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
+gem 'payjp'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'kaminari'
+gem 'ransack'
