@@ -1,0 +1,37 @@
+/ = link_to 'ログアウト', destroy_user_session_path, method: :delete
+/ = link_to '新規登録', new_user_registration_path
+/ = link_to 'ログイン', new_user_session_path
+.default-container
+  = render 'header'
+
+.pickup_container
+  %h3.pickup_container__message
+    ピックアップアイテム
+  .new_pickup__category
+    = render 'ladies'
+
+  .new_pickup__category
+    = render 'mens'
+
+  .new_pickup__category
+    = render 'baby'
+
+  .new_pickup__category
+    = render 'cosme'
+
+.pickup_container
+  %h3.pickup_container__message
+    ピックアップブランド
+  .new_pickup__category
+    = render 'chanel'
+
+  .new_pickup__category
+    = render 'louis'
+
+  .new_pickup__category
+    = render 'supreme'
+
+  .new_pickup__category
+    = render 'nike'
+
+= render 'footer'
