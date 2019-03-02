@@ -87,10 +87,6 @@ gem 'omniauth-google-oauth2'
 gem 'kaminari'
 gem 'ransack'
 
-<<<<<<< HEAD
-group :roduction do
-=======
 group :production do
->>>>>>> 7c0b94b6bdedfd74379af0e768951544d8b83f42
   gem 'unicorn'
 end
