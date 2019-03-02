@@ -86,3 +86,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'kaminari'
 gem 'ransack'
+
+group :roduction do
+  gem 'unicorn'
+end
