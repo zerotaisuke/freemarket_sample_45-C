@@ -26,20 +26,20 @@ describe User do
     it "is invalid without email(メアド無しでは不正になる)" do
       user = FactoryBot.build(:user, email: nil)
       user.valid?
-      expect(user.errors[:email]).to include("can't be blank")
+      expect(user.errors[:email]).to include("を入力してください")
     end
 
     it "is invalid without a nickname(ニックネーム無しでは不正になる)" do
       profile = FactoryBot.build(:profile, nickname: nil)
       profile.valid?
-      expect(profile.errors[:nickname]).to include("can't be blank")
+      expect(profile.errors[:nickname]).to include("を入力してください")
     end
 
-    it "is invalid with a registered email address" do
+    it "is invalid with a registered email address(既に登録しているメールアドレスでは不正になる)" do
       user = FactoryBot.create(:user)
       another_user = FactoryBot.build(:user, email: user.email)
       another_user.valid?
-      expect(another_user.errors[:email]).to include("has already been taken")
+      expect(another_user.errors[:email]).to include("はすでに存在します")
     end
 
   end

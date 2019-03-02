@@ -1,13 +1,13 @@
 FactoryBot.define do
 
   factory :profile do
-    name                  {"メルカリ太郎"}
-    nickname              {"メル太"}
-    birthdate             {"20000101"}
-    postal_code           {"333-3333"}
-    prefecture            {"大阪府"}
-    municipality          {"大阪市"}
-    block                 {"心斎橋1-1-1"}
+    name                  Faker::Name.name
+    nickname              Faker::Name.first_name
+    birthdate             Faker::Date.birthday.to_s.delete("-")
+    postal_code           Faker::Address.postcode
+    prefecture            Faker::Address.state
+    municipality          Faker::Address.city
+    block                 Faker::Address.street_name
     user
   end
 
