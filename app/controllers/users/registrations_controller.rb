@@ -6,9 +6,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
-    build_resource
-    resource.build_profile
-    
+    @user = User.new
+    @profile = @user.build_profile
+
   end
 
   # POST /resource
