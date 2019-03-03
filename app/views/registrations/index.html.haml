@@ -1,0 +1,22 @@
+.main-content
+  = render 'registration-header'
+
+  .main-content__signup
+    .main-content__signup-content
+      .main-content__signup-content-head 新規会員登録
+      .main-content__signup-content-main
+        .main-content__signup-content-main-content
+          %button.e-mail
+            %i.fa.fa-envelope
+            メールアドレスで登録
+          %button.facebook-login
+            %i.fab.fa-facebook.fa-pull-left
+            Facebookで登録
+            = link_to ''
+          %button.google-login
+            %i.fab.fa-google.fa-pull-left
+            Googleで登録
+            = link_to ''
+
+
+  = render 'registration-footer'
