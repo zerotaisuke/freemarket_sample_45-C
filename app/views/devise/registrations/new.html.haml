@@ -3,24 +3,45 @@
   = render "devise/shared/error_messages", resource: resource
   .field
     = f.label :email
-    %br/
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
     = f.label :password
     - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
+      (#{@minimum_password_length}文字以上)
     = f.password_field :password, autocomplete: "new-password"
   .field
     = f.label :password_confirmation
-    %br/
     = f.password_field :password_confirmation, autocomplete: "new-password"
-  = form.fields_for :user do |f|
+  = f.fields_for :profile do |f|
     .field
       = f.label :name
       = f.text_field :name
-
+    .field
+      = f.label :nickname
+      = f.text_field :nickname
+    .field
+      = f.label :birthdate
+      = raw sprintf(f.date_select(:birthdate,
+                                  start_year: 1910,
+                                  end_year: Time.now.year,
+                                  use_month_numbers: true,
+                                  default: Date.new(2000, 1, 1),
+                                  date_separator: '%s'),'年','月') + '日'
+    .field
+      = f.label :postal_code
+      = f.text_field :postal_code
+    .field
+      = f.label :prefecture
+      = f.text_field :prefecture
+    .field
+      = f.label :municipality
+      = f.text_field :municipality
+    .field
+      = f.label :block
+      = f.text_field :block
+    .field
+      = f.label :payment_methods
+      = f.text_field :payment_methods
 
   .actions
     = f.submit "Sign up"
