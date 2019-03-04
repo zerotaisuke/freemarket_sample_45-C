@@ -23,13 +23,12 @@ header{
   @include height_width(100px,100vh);
   @include padding_side(100px,100px);
 
-&__mercari {
-  @include height_width(148px,100px);
-  }
-
-.mercari_logo{
-  @include height_width(40px,148px);
-  padding-top:5px;
+  &__mercari {
+    @include height_width(148px,100px);
+    }
+    .mercari_logo{
+      @include height_width(40px,148px);
+      padding-top:5px;
 
   }
 }
@@ -60,18 +59,18 @@ li{
   @include flex_start();
   padding-left: 95px;
 
-&__left{
-  // @include flex_start();
-  @include flex();
-   width: 300px;
-   padding-left: 50px;
-}
-&__right{
-  @include flex();
-  width: 650px;
+  &__left{
+    @include flex();
+     width: 300px;
+     padding-left: 50px;
   }
-}
+    &__right{
+      @include flex();
+      width: 650px;
+      }
+    }
 
 .top_banner__main_image{
   width: 100%;
+  vertical-align: bottom;
 }

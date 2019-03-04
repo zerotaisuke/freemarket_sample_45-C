@@ -6,9 +6,9 @@
   padding-top: 40px;
   @include height_width(270vh,100%);
 
-&__message{
-  text-align: center;
-  font-size: 28px;
+  &__message{
+    text-align: center;
+    font-size: 28px;
   }
 }
 // カテゴリータイトル
@@ -17,11 +17,11 @@
   color:$white;
   font-weight:bold;
 
-&__ladies_new__message{
-  font-size: 22px;
-  text-align: center;
-  padding-top:38px;
-   color: $light_blue;
+  &__ladies_new__message{
+    font-size: 22px;
+    text-align: center;
+    padding-top:38px;
+     color: $light_blue;
   }
 }
 // /*出品ボタン*/
@@ -33,19 +33,19 @@
    right:20px;
    bottom:20px;
 
-p.sell_btn__message{
-  color:$white;
-  font-size:22px;
-  position: relative;
-  top:30px;
-  left:55px;
-}
-i.fas.fa-camera{
-  color:$white;
-  font-size:59.91px;
-  position: relative;
-  top:30px;
-  left:50px;
+  p.sell_btn__message{
+    color:$white;
+    font-size:22px;
+    position: relative;
+    top:30px;
+    left:55px;
+  }
+    i.fas.fa-camera{
+      color:$white;
+      font-size:59.91px;
+      position: relative;
+      top:30px;
+      left:50px;
   }
 }
 
@@ -55,10 +55,10 @@ i.fas.fa-camera{
   margin: 0 auto;
   @include flex();
 
-&__contents_box{
-  background-color: $white;
-  @include height_width(330px,213px);
-  margin-top: 25px;
+  &__contents_box{
+    background-color: $white;
+    @include height_width(330px,213px);
+    margin-top: 25px;
    }
 }
 
@@ -69,35 +69,35 @@ i.fas.fa-camera{
   margin-right:20px;
   position:relative;
 
-&__name{
-  font-weight: lighter;
-  color:$black;
-  @include height_width(48px,181px);
-  padding-top:20px;
-  box-sizing: border-box;
-}
-&__num{
-  color:$black;
-  @include height_width(30px,165.23px);
-  position:absolute;
-  bottom:10px;
+  &__name{
+    font-weight: lighter;
+    color:$black;
+    @include height_width(48px,181px);
+    padding-top:20px;
+    box-sizing: border-box;
+  }
+    &__num{
+      color:$black;
+      @include height_width(30px,165.23px);
+      position:absolute;
+      bottom:10px;
 
-&__price{
-  font-size: 8px;
-  color:$black;
-  @include height_width(20px,60.81px);
-}
-.item_box_body__num__tax{
-  color:$black;
-  @include height_width(10px,165.23px);
-  font-size: 5px;
-  position:relative;
-}
-i.far.fa-heart{
-  position:absolute;
-  color:#CCCCCC ;
-  bottom:10px;
-  right:-10px;
+      &__price{
+        font-size: 8px;
+        color:$black;
+        @include height_width(20px,60.81px);
+    }
+        .item_box_body__num__tax{
+          color:$black;
+          @include height_width(10px,165.23px);
+          font-size: 5px;
+          position:relative;
+      }
+          i.far.fa-heart{
+            position:absolute;
+            color:#CCCCCC ;
+            bottom:10px;
+            right:-10px;
      }
   }
 }
