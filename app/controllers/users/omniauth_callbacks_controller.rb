@@ -5,9 +5,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # devise :omniauthable, omniauth_providers: [:twitter]
 
 
-  # You should also create an action method in this controller like this:
-  # def twitter
-  # end
+  def facebook
+    callback_for(:facebook)
+  end
 
   def google_oauth2
     callback_for(:google)
