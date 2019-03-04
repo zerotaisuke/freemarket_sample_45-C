@@ -1,19 +1,31 @@
+/ %header
+/   .header__mercari
+/     = image_tag "top_image/logo.svg", class: 'mercari_logo'
+/     %li.cp_iptxt
+/       %label.ef
+/         %input{:placeholder => "何をお探しですか?", :type => "text"}/
+/   .header__navi
+/     .header__navi__left
+/       %li カテゴリーから探す
+/       %li ブランドから探す
+/     %li
+/       マイページ
+/       %i.far.fa-bell
+/       お知らせ
+/     %li
+/       %i.fas.fa-check
+/       やることリスト
 %header
   .header__mercari
     = image_tag "top_image/logo.svg", class: 'mercari_logo'
-    %li.cp_iptxt
-      %label.ef
-        %input{:placeholder => "何をお探しですか?", :type => "text"}/
+    %input{:placeholder => "キーワード検索", :size => "100%", :type => "text"}/
+
   .header__navi
     .header__navi__left
-      %li カテゴリーから探す
-      %li ブランドから探す
-    %li
-      マイページ
-      %i.far.fa-bell
-      お知らせ
-    %li
-      %i.fas.fa-check
-      やることリスト
-.top_banner
-= image_tag "top_image/1.jpg", id: 'main_image', class: 'top_banner__main_image'
+      %p カテゴリーから探す
+      %p ブランドから探す
+    .header__navi__right
+      %p.right マイページ
+      %p.right お知らせ
+      %p.right やることリスト
+

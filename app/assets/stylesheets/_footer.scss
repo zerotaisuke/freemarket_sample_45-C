@@ -1,38 +1,40 @@
 @import "./variable";
 /*フッタートップ画像ついている方*/
+.footer{
+  bottom:0px;
+}
+
 .footer__top_banner{
 	background: url(top_image/designer__s_room__by_k3nzus.png);
   @include height_width(260px,100vw);
-  position:relative;
 
-&__mobile{
-  position:absolute;
-  right:400px;
-}
-&__message{
-  position:relative;
-  top:50px;
-  left:350px;
-  color:$white;
-  font-size:22px;
-  font-weight:bold;
-}
-.mercari_radius{
-  radius-border: 10px;
-  position:relative;
-  top:90px;
-  left:350px;
-}
-  .apple_logo_bottom{
+  &__container{
+    @include height_width(250px,700px);
     position:relative;
-    top:15px;
-    left:225px;
+    margin: 0 auto;
+}
+
+  &__mobile{
+    @include height_width(250px,250px);
+    position:absolute;
+    right:100px;
   }
-    .google_logo_bottom{
-      position:relative;
-      top:-10px;
-      left:600px;
+    &__message{
+      color:$white;
+      font-size:22px;
+      font-weight:bold;
+    }
+      .mercari_radius{
+        radius-border: 10px;
+      }
+        .apple_logo_bottom{
+
+        }
+          .google_logo_bottom{
+
   }
+}
+.footer__top_banner__container__icon{
 }
 // フッターメッセージ文字サイズ
 span{
@@ -52,20 +54,20 @@ span{
   font-size: 15px;
   line-height: 30px;
 
-&__about_mercari{
-  color:$white;
-  @include height_width(300px,200px);
-}
-&__show_mercari{
- color:$white;
- @include height_width(300px,200px);
-}
-&__help_guide_mercari{
-  color:$white;
-  @include height_width(300px,250px);
-}
-&__country_mercari{
-  color:$white;
-  @include height_width(300px,200px);
+  &__about_mercari{
+    color:$white;
+    @include height_width(300px,200px);
   }
-}
+    &__show_mercari{
+     color:$white;
+     @include height_width(300px,200px);
+    }
+      &__help_guide_mercari{
+        color:$white;
+        @include height_width(300px,250px);
+      }
+        &__country_mercari{
+          color:$white;
+          @include height_width(300px,200px);
+          }
+        }

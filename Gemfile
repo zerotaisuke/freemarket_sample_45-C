@@ -43,6 +43,11 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'faker'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -86,3 +91,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'kaminari'
 gem 'ransack'
+
+group :production do
+  gem 'unicorn'
+end
