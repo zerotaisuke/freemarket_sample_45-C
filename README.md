@@ -53,7 +53,7 @@
 |prefecture|string|null: false|
 |category_id|references|null: false,foreign_key: true|
 |brand_id|references|foreign_key: true|
-|user_id|references|foreign_key: true|
+|user_id|references|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :category
