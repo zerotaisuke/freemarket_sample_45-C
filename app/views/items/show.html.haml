@@ -1,2 +1,125 @@
-%h1 Items#show
-%p Find me in app/views/items/show.html.erb
+/ %h1 Items#show
+/ %p Find me in app/views/items/show.html.erb
+= render 'header'
+
+.pickup_container
+  .individual_item_container
+    .individual_item_container__item_name
+      どこでもDOOR
+    .individual_item_container__item_flex
+      .individual_item_container__item_image
+      = image_tag "top_image/img20070322_p.gif"
+      / = image_tag "top_image/m42018897171_1.jpg"
+      %table
+        %tr
+          %th 出品者
+          %td ぼくドラえもんです
+        %tr
+          %th カテゴリー
+          %td 22世紀の道具
+        %tr
+          %th ブランド
+          %td 22世紀
+        %tr
+          %th 商品のサイズ
+          %td 一般的なドアの大きさ
+        %tr
+          %th 商品の状態
+          %td 目立った傷や汚れなし
+        %tr
+          %th 配送料負担
+          %td なし
+        %tr
+          %th 配送方法
+          %td Time Machine
+        %tr
+          %th 配送地域
+          %td 100年後の日本
+        %tr
+          %th 配送日の目安
+          %td 即日配達
+    .individual_item_container__item_price
+      ¥ 1,499 (税込) 送料込み
+    .individual_item_container__item_button 購入画面に進む
+    .individual_item_container__item_description
+      %p 漫画『ドラえもん』に登場するひみつ道具の一つ。OPの3番にも登場する。場所を思い浮かべてドアを開けるとその場所に繋がって移動出来る。元の場所に戻るには、ドアを反対側から開けばよい。汎用性が高いため、タケコプター等と並んで登場回数の多い道具でもある。(その汎用性の高さゆえに大長編などではしばしば使用不可能になるのだが)行き先を明確に指定しなくても、それこそ「どこか遠い山奥へ」や「○○がいる（ある）場所」と大雑把に告げても、自動的に手ごろな場所や使用者が目的を果たせる場所へ繋いでくれる。慌てて逃げ込んだ時、特に場所を思い浮かべずに開けた場合でも、行き先受信ノブが使用者の深層心理や願望を反映した場所に繋げてくれる。ただしこれがまた融通が利きすぎると言えばいいのか、のび太がそういう風に開けた場合は源家の風呂場に出ることが多く、入浴中の静香を怒らせている。ドラえもんが開けていきなり宇宙空間に出てしまい、野比家の気圧変化に伴い暴風が吹き荒れたこともあった。移動できる限度は10光年以内とも、宇宙の果てまで行けるともされていて、はっきり設定されていない
+      .individual_item_container__box
+        .individual_item_container__box__like_button いいね！
+        .individual_item_container__box__report_button 不適切な商品の報告
+        .individual_item_container__box__message  あんしん・あんぜんへの取り組み
+
+  .comment-container
+    .comment-container__box
+      %p.comment 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      .comment-container__box__comment
+        %textarea{:cols => "50", :name => "example", :rows => "10"}
+      .comment-container__box__button コメントする
+  .link_prev_next
+    .link_prev 意外に大変。 後藤浩輝
+    .link_next adidas originals パーカー
+  .item_social_media_box
+    / = image_tag "top_image/Twitter_Logo_WhiteOnBlue.eps",class: 'pp'
+  .item_social_media_box
+  .balloon5
+    .says 文章を入れる
+
+
+  .new_pickup__category__new
+    .new_pickup__category__new__contents_box
+      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
+      .item_box_body
+        .item_box_body__name
+          ズボン
+        .item_box_body__num
+          .item_box_body__num__price ¥11,111
+          .item_box_body__num__tax (税込)
+          %i.far.fa-heart 4
+    .new_pickup__category__new__contents_box
+      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
+      .item_box_body
+        .item_box_body__name
+          ズボン
+        .item_box_body__num
+          .item_box_body__num__price ¥11,111
+          .item_box_body__num__tax (税込)
+          %i.far.fa-heart 4
+    .new_pickup__category__new__contents_box
+      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
+      .item_box_body
+        .item_box_body__name
+          ズボン
+        .item_box_body__num
+          .item_box_body__num__price ¥11,111
+          .item_box_body__num__tax (税込)
+          %i.far.fa-heart 4
+
+  .new_pickup__category__new
+    .new_pickup__category__new__contents_box
+      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
+      .item_box_body
+        .item_box_body__name
+          ズボン
+        .item_box_body__num
+          .item_box_body__num__price ¥11,111
+          .item_box_body__num__tax (税込)
+          %i.far.fa-heart 4
+    .new_pickup__category__new__contents_box
+      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
+      .item_box_body
+        .item_box_body__name
+          ズボン
+        .item_box_body__num
+          .item_box_body__num__price ¥11,111
+          .item_box_body__num__tax (税込)
+          %i.far.fa-heart 4
+    .new_pickup__category__new__contents_box
+      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
+      .item_box_body
+        .item_box_body__name
+          ズボン
+        .item_box_body__num
+          .item_box_body__num__price ¥11,111
+          .item_box_body__num__tax (税込)
+          %i.far.fa-heart 4
+
+= render 'footer'

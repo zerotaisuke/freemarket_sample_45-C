@@ -1,12 +1,14 @@
 @import "./variable";
 /*フッタートップ画像ついている方*/
-.footer{
-  bottom:0px;
+footer{
+  height:100%;
+  white-space: nowrap;
 }
 
 .footer__top_banner{
-	background: url(top_image/designer__s_room__by_k3nzus.png);
+  background: url(top_image/designer__s_room__by_k3nzus.png);
   @include height_width(260px,100vw);
+  position: relative;
 
   &__container{
     @include height_width(250px,700px);
@@ -56,7 +58,7 @@ span{
 
   &__about_mercari{
     color:$white;
-    @include height_width(300px,200px);
+    @include height_width(300px,350px);
   }
     &__show_mercari{
      color:$white;

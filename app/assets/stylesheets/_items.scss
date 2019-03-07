@@ -2,7 +2,7 @@
 
 /*ここからメインコンテンツ*/
 .pickup_container{
-	background-color: $thin_gray;
+  background-color: $thin_gray;
   padding-top: 40px;
   width: 100%;
   min-width:500px;
@@ -25,6 +25,7 @@
      color: $light_blue;
   }
 }
+
 // /*出品ボタン*/
 .sell_btn{
   background-color: $red;
