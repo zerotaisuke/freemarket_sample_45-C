@@ -4,37 +4,37 @@
 
 .default-container
   = render 'header'
-  .top_banner
-  = image_tag "top_image/1.jpg", id: 'main_image', class: 'top_banner__main_image'
+.top_banner
+= image_tag "top_image/1.jpg", id: 'main_image', class: 'top_banner__main_image'
 
-  .pickup_container
-    %h3.pickup_container__message
-      ピックアップアイテム
-    .new_pickup__category
-      = render 'ladies'
+.pickup_container
+  %h3.pickup_container__message
+    ピックアップアイテム
+  .new_pickup__category
+    = render 'ladies'
 
-    .new_pickup__category
-      = render 'mens'
+  .new_pickup__category
+    = render 'mens'
 
-    .new_pickup__category
-      = render 'baby'
+  .new_pickup__category
+    = render 'baby'
 
-    .new_pickup__category
-      = render 'cosme'
+  .new_pickup__category
+    = render 'cosme'
 
-  .pickup_container
-    %h3.pickup_container__message
-      ピックアップブランド
-    .new_pickup__category
-      = render 'chanel'
+.pickup_container
+  %h3.pickup_container__message
+    ピックアップブランド
+  .new_pickup__category
+    = render 'chanel'
 
-    .new_pickup__category
-      = render 'louis'
+  .new_pickup__category
+    = render 'louis'
 
-    .new_pickup__category
-      = render 'supreme'
+  .new_pickup__category
+    = render 'supreme'
 
-    .new_pickup__category
-      = render 'nike'
+  .new_pickup__category
+    = render 'nike'
 
 = render 'footer'
