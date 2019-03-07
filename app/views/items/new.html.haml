@@ -2,7 +2,7 @@
   = render "/registrations/registration-header"
   .item-content-area
     .item-content-area__text 商品の情報を入力
-    = form_for @item do |f|
+    = form_with model: @item, local: true do |f|
       // 出品画像
       = f.fields_for :image do |i|
         .item-image.box
