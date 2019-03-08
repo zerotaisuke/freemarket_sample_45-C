@@ -7,7 +7,4 @@ class ProfilesController < ApplicationController
 
   def edit
   end
-
-  def create
-  end
 end
