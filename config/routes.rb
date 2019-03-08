@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :items, only: %i(index show)
+  resources :items, only: %i(index show new)
   root 'items#index'
   devise_for :users, controllers: { registrations: 'users/registrations',
                                     omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    resources :users, only: :index
+    resources :users, only: [:index,:show]
   end
 
   resources :registrations,only:[:index,:new]
