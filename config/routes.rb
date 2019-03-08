@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :profiles, only: :index
+  resources :profiles , only: [:index, :show, :edit, :create]
 
 
   namespace :admin do

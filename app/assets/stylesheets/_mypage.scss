@@ -1,0 +1,345 @@
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  border-style: solid;
+  border-width: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+:root {
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000;
+    cursor: default;
+    font: 66.66667% sans-serif;
+}
+::before, ::after {
+  border-style: solid;
+  border-width: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+}
+
+main, div {
+  display: block;
+}
+
+ul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.l-container {
+  margin: 24px auto 0;
+  padding: 0 0 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .l-container {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .l-container {
+    margin: 40px auto 0;
+    width: 1020px;
+  }
+}
+
+.l-content {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .l-content {
+    float: none;
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .l-content {
+    float: right;
+  }
+}
+
+.mypage-user-icon {
+  position: relative;
+  height: 155px;
+  padding: 20px;
+  background: url(top_image/user-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  > a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #333;
+  }
+  figure {
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  h2 {
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mypage-user-icon {
+    height: 200px;
+  }
+}
+
+.mypage-number {
+  margin: 8px 0 0;
+  font-size: 0;
+  div {
+    display: inline-block;
+    font-size: 14px;
+  }
+  span {
+    margin: 0 0 0 8px;
+    font-size: 16px;
+  }
+  div + div {
+    margin: 0 0 0 16px;
+  }
+}
+
+.mypage-tab-container-notification-todo {
+  margin: 0;
+  background: #fff;
+}
+
+.mypage-tabs, .listing-tabs, .review-history-tabs {
+  border: 0;
+  background: #eee;
+  font-size: 0;
+}
+
+.mypage-tabs li.active, .listing-tabs li.active, .review-history-tabs li.active {
+  background: #fff;
+}
+
+.mypage-tabs li {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.listing-tabs li, .review-history-tabs li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.mypage-tabs li.active a, .listing-tabs li.active a, .review-history-tabs li.active a {
+  border-top: 2px solid #ea352d;
+}
+
+.mypage-tabs a, .listing-tabs a, .review-history-tabs a {
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.tab-content .tab-pane {
+  &.active {
+    display: block;
+  }
+  display: none;
+}
+
+.mypage-item-list li {
+  &.mypage-item-not-found {
+    border: 0;
+  }
+  &:first-child {
+    border-bottom: 1px solid #eee;
+  }
+  &:last-child {
+    border: 0;
+  }
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.mypage-item-not-found {
+  padding: 160px 0 60px;
+  background: url(https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?6820409);
+  background-repeat: no-repeat;
+  background-position: center 40px;
+  background-size: 78px 85px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.mypage-tab-container {
+  margin: 40px 0 0;
+  background: #fff;
+}
+
+.mypage-tab-head {
+  padding: 0 4%;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .mypage-tab-head {
+    padding: 0 16px;
+  }
+}
+
+.l-side {
+  margin: 40px auto 0;
+}
+
+@media screen and (min-width: 768px) {
+  .l-side {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .l-side {
+    float: left;
+    width: 280px;
+    margin: 0 40px 0 0;
+  }
+}
+
+.mypage-nav-list li {
+  &:first-child {
+    border: 0;
+  }
+  border-top: 1px solid #eee;
+}
+
+.mypage-nav-list-item {
+  &.active {
+    background: #eee;
+    font-weight: 600;
+    .fa-angle-right {
+      color: #333;
+    }
+  }
+  position: relative;
+  display: block;
+  min-height: 48px;
+  padding: 16px;
+  background: #fff;
+  color: #333;
+  box-sizing: border-box;
+  .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    color: #ccc;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all ease-out .2s;
+    transition: all ease-out .2s;
+  }
+}
+
+i[class^='icon-'], i[class*='icon-'] {
+    display: inline-block;
+    font-family: 'icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-chevron-right:before {
+    content: '\e005';
+}
+
+.mypage-nav-head {
+  margin: 40px 4% 0;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .mypage-nav-head {
+    margin: 40px 0 0;
+  }
+}
