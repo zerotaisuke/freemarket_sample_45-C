@@ -24,12 +24,10 @@
 
 // ヘッダ全体とヘッダー上部
 header{
-  @include height_width(100px,100vw);
+   @include height_width(160px,100vw);
   @include padding_side(200px,200px);
   position:relative;
-  max-width: 100%;
   height: auto;
-
 
 
   &__mercari {

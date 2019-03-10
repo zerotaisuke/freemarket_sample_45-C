@@ -1,75 +1,71 @@
-@import "./variable";
-/*フッタートップ画像ついている方*/
-footer{
-  height:100%;
-  white-space: nowrap;
-}
+// @import "./variable";
+// /*フッタートップ画像ついている方*/
+// .footer__top_banner{
+// 	background: url(top_image/designer__s_room__by_k3nzus.png);
+//   @include height_width(260px,100vw);
+//   position:relative;
 
-.footer__top_banner{
-  background: url(top_image/designer__s_room__by_k3nzus.png);
-  @include height_width(260px,100vw);
-  position: relative;
+//   &__mobile{
+//     position:absolute;
+//     right:400px;
+//   }
+//     &__message{
+//       position:relative;
+//       top:50px;
+//       left:350px;
+//       color:$white;
+//       font-size:22px;
+//       font-weight:bold;
+//     }
+//       .mercari_radius{
+//         radius-border: 10px;
+//         position:relative;
+//         top:90px;
+//         left:350px;
+//       }
+//         .apple_logo_bottom{
+//           position:relative;
+//           top:15px;
+//           left:225px;
+//         }
+//           .google_logo_bottom{
+//             position:relative;
+//             top:-10px;
+//             left:600px;
+//   }
+// }
+// // フッターメッセージ文字サイズ
+// span{
+//   font-size:30px;
+// }
+// /*フッター黒*/
+// .footer__bottom__banner{
+//   background-color: #222222;
+//   @include height_width(500px,100vw);
 
-  &__container{
-    @include height_width(250px,700px);
-    position:relative;
-    margin: 0 auto;
-}
+//   padding-top: 50px;
+//   @include padding_side(150px,150px);
+//   display:flex;
+//   flex-direction:row;
+//   justify-content: space-around;
+//   text-align:center;
+//   font-size: 15px;
+//   line-height: 30px;
 
-  &__mobile{
-    @include height_width(250px,250px);
-    position:absolute;
-    right:100px;
-  }
-    &__message{
-      color:$white;
-      font-size:22px;
-      font-weight:bold;
-    }
-      .mercari_radius{
-        radius-border: 10px;
-      }
-        .apple_logo_bottom{
-
-        }
-          .google_logo_bottom{
-
-  }
-}
-.footer__top_banner__container__icon{
-}
-// フッターメッセージ文字サイズ
-span{
-  font-size:30px;
-}
-/*フッター黒*/
-.footer__bottom__banner{
-  background-color: #222222;
-  @include height_width(500px,100vw);
-
-  padding-top: 50px;
-  @include padding_side(150px,150px);
-  display:flex;
-  flex-direction:row;
-  justify-content: space-around;
-  text-align:center;
-  font-size: 15px;
-  line-height: 30px;
-
-  &__about_mercari{
-    color:$white;
-    @include height_width(300px,350px);
-  }
-    &__show_mercari{
-     color:$white;
-     @include height_width(300px,200px);
-    }
-      &__help_guide_mercari{
-        color:$white;
-        @include height_width(300px,250px);
-      }
-        &__country_mercari{
-          color:$white;
-          @include height_width(300px,200px);
-          }
-        }
+//   &__about_mercari{
+//     color:$white;
+//     @include height_width(300px,200px);
+//   }
+//     &__show_mercari{
+//      color:$white;
+//      @include height_width(300px,200px);
+//     }
+//       &__help_guide_mercari{
+//         color:$white;
+//         @include height_width(300px,250px);
+//       }
+//         &__country_mercari{
+//           color:$white;
+//           @include height_width(300px,200px);
+//           }
+//         }

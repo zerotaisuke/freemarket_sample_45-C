@@ -2,10 +2,9 @@
 
 /*ここからメインコンテンツ*/
 .pickup_container{
-  background-color: $thin_gray;
+	background-color: $thin_gray;
   padding-top: 40px;
-  width: 100%;
-  min-width:500px;
+  @include height_width(270vh,100%);
 
   &__message{
     text-align: center;
@@ -25,7 +24,6 @@
      color: $light_blue;
   }
 }
-
 // /*出品ボタン*/
 .sell_btn{
   background-color: $red;
