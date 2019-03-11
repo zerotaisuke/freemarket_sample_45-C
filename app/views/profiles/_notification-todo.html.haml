@@ -1,0 +1,11 @@
+.notificationTodo
+  %ul.notificationTodo__mypageTabs
+    %li.info
+      = link_to "お知らせ", class: "info"
+    %li.todo
+      = link_to "やることリスト", class: "todo"
+  .notificationTodo__tabContent
+    %ul.notificationTodo__tabContent__notification
+    %ul.notificationTodo__tabContent__todo
+      %li.notFoundTab
+        現在、やることリストはありません
