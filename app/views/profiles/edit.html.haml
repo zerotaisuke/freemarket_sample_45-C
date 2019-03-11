@@ -1,55 +1,56 @@
-= render 'items/header'
-.l-container.clearfix
-  .l-content
-    .personalInfomation
-      %h2.personalHead 本人情報の登録
-      %form.personalBody{action: "", method: "POST", novalidate: ""}
-        .confirmation
-          %p.confirmation__description
-            お客さまの本人情報をご登録ください。
-            %br>/
-            登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
-          %p.confirmation__descriptionDetail
-            = link_to "本人確認書類のアップロードについて" , class: "upload"
-            %i.fas.fa-chevron-right
-        .formBoard
-          .formBoard__formHead お名前
-          .formBoard__formItem 手苦 駅酢派後
-        .formBoard
-          .formBoard__formHead お名前カナ
-          .formBoard__formItem テック エキスパート
-        .formBoard
-          .formBoard__formHead{for: "birthday"} 生年月日
-          .formBoard__formItem 2019/01/12
-        .formBoard
-          .formBoard__formHead{for: "postal_code"} 郵便番号
-          %span.formBoard__arbitrary 任意
-          %input.formBoard__inputDefault{name: "zip_code", placeholder: "例）5420081", type: "text", value: ""}/
-        .formBoard
-          .formBoard__formHead{for: "prefecture"} 都道府県
-          %span.formBoard__arbitrary 任意
-          .formBoard__selectWrap
-            %select.formBoard__selectWrap--prefecture{name: "prefecture"}
-              %option 東京
-              %option 大阪府
-            %i.formBoard__selectWrap.fas.fa-chevron-down
-        .formBoard
-          .formBoard__formHead{for: "city"} 市区町村
-          %span.formBoard__arbitrary 任意
-          %input.formBoard__inputDefault{name: "city", placeholder: "例) 大阪市中央区", type: "text", value: ""}/
-        .formBoard
-          .formBoard__formHead{for: "address1_label"} 番地
-          %span.formBoard__arbitrary 任意
-          %input.formBoard__inputDefault{name: "address1", placeholder: "例) 南船場2-6-28", type: "text", value: ""}/
-        .formBoard
-          .formBoard__formHead{for: "address2_label"} 建物名
-          %span.formBoard__arbitrary 任意
-          %input.formBoard__inputDefault{name: "address2", placeholder: "例) ユタカビル7階", type: "text", value: ""}/
-        %button.btnRegist{type: "submit"} 登録する
-        .confirmation.another
-          %p.confirmation__descriptionDetail
-            = link_to "本人情報の登録について" , class: "regist"
-            %i.fas.fa-chevron-right
-        %input.personalData{type: "hidden", value: ""}/
-  = render 'l-side'
-= render 'items/footer'
+.main-content
+  = render 'items/header'
+  .l-container.clearfix
+    .l-content
+      .personalInfomation
+        %h2.personalHead 本人情報の登録
+        %form.personalBody{action: "", method: "POST", novalidate: ""}
+          .confirmation
+            %p.confirmation__description
+              お客さまの本人情報をご登録ください。
+              %br>/
+              登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+            %p.confirmation__descriptionDetail
+              = link_to "本人確認書類のアップロードについて" , class: "upload"
+              %i.fas.fa-chevron-right
+          .formBoard
+            .formBoard__formHead お名前
+            .formBoard__formItem 手苦 駅酢派後
+          .formBoard
+            .formBoard__formHead お名前カナ
+            .formBoard__formItem テック エキスパート
+          .formBoard
+            .formBoard__formHead{for: "birthday"} 生年月日
+            .formBoard__formItem 2019/01/12
+          .formBoard
+            .formBoard__formHead{for: "postal_code"} 郵便番号
+            %span.formBoard__arbitrary 任意
+            %input.formBoard__inputDefault{name: "zip_code", placeholder: "例）5420081", type: "text", value: ""}/
+          .formBoard
+            .formBoard__formHead{for: "prefecture"} 都道府県
+            %span.formBoard__arbitrary 任意
+            .formBoard__selectWrap
+              %select.formBoard__selectWrap--prefecture{name: "prefecture"}
+                %option 東京
+                %option 大阪府
+              %i.formBoard__selectWrap.fas.fa-chevron-down
+          .formBoard
+            .formBoard__formHead{for: "city"} 市区町村
+            %span.formBoard__arbitrary 任意
+            %input.formBoard__inputDefault{name: "city", placeholder: "例) 大阪市中央区", type: "text", value: ""}/
+          .formBoard
+            .formBoard__formHead{for: "address1_label"} 番地
+            %span.formBoard__arbitrary 任意
+            %input.formBoard__inputDefault{name: "address1", placeholder: "例) 南船場2-6-28", type: "text", value: ""}/
+          .formBoard
+            .formBoard__formHead{for: "address2_label"} 建物名
+            %span.formBoard__arbitrary 任意
+            %input.formBoard__inputDefault{name: "address2", placeholder: "例) ユタカビル7階", type: "text", value: ""}/
+          %button.btnRegist{type: "submit"} 登録する
+          .confirmation.another
+            %p.confirmation__descriptionDetail
+              = link_to "本人情報の登録について" , class: "regist"
+              %i.fas.fa-chevron-right
+          %input.personalData{type: "hidden", value: ""}/
+    = render 'l-side'
+  = render 'items/footer'
