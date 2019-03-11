@@ -1,17 +1,13 @@
 %header
   .header__mercari
     = image_tag "top_image/logo.svg", class: 'mercari_logo'
-    %li.cp_iptxt
-      %label.ef
-        %input{:placeholder => "何をお探しですか?", :type => "text"}/
+    %input{:placeholder => "キーワード検索", :size => "100%", :type => "text"}/
+
   .header__navi
     .header__navi__left
-      %li カテゴリーから探す
-      %li ブランドから探す
-    %li
-      マイページ
-      %i.far.fa-bell
-      お知らせ
-    %li
-      %i.fas.fa-check
-      やることリスト
+      %p.left カテゴリーから探す
+      %p.left ブランドから探す
+    .header__navi__right
+      %p.right マイページ
+      %p.right お知らせ
+      %p.right やることリスト

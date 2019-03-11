@@ -17,56 +17,56 @@
   flex-direction:row;
   justify-content: flex-start;
 }
+*{
+  box-sizing:border-box;
+}
 
 // ヘッダ全体とヘッダー上部
 header{
-  @include height_width(100px,100vh);
-  @include padding_side(100px,100px);
+  @include height_width(100px,100vw);
+  @include padding_side(200px,200px);
+  position:relative;
 
   &__mercari {
     @include height_width(148px,100px);
     }
     .mercari_logo{
-      @include height_width(40px,148px);
-      padding-top:5px;
-
+      @include height_width(40px,130px);
+      margin-top:5px;
   }
 }
-
-li{
-  display: inline-block;
-  font-size:13px;
+input{
+  width: calc(100% - 150px);
+  float:right;
+  margin-top: 10px;
+  padding-top: 5px;
 }
-/*検索フォーム*/
-.cp_iptxt input[type='text'] {
-  font: 15px/24px sans-serif;
-  box-sizing: border-box;
-  width:950px;
-  padding: 0.3em;
-  transition: 0.3s;
-  letter-spacing: 1px;
-  border: 1px solid #1b2538;
-  border-radius: 4px;
-  position:absolute;
-  top: 5px;
+p.left{
+  width: 180px;
+}
+p.right{
+  width: 99px;
 }
 
 // ヘッダーの下の部分
 .header__navi{
-  @include height_width(38px,950px);
+  @include height_width(38px,100%);
   font-size: 14px;
   padding-top: 15px;
   @include flex_start();
-  padding-left: 95px;
+  margin-bottom:20px;
 
   &__left{
     @include flex();
      width: 300px;
-     padding-left: 50px;
+     white-space: nowrap;
   }
     &__right{
-      @include flex();
-      width: 650px;
+      display:flex;
+      flex-direction:row;
+      justify-content: flex-end;
+      width: 800px;
+
       }
     }
 
