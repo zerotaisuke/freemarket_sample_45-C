@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations',
                                     omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :profiles, only: [:index, :show, :edit]
+  resources :profiles, only: [:index, :show, :edit, :new]
 
 
   namespace :admin do
