@@ -1,19 +1,14 @@
-%section.mypage-tab-container
-  %h2.mypage-tab-head
+.purchased
+  %h2.purchased__tabHead
     購入した商品
-  %ul.mypage-tabs
-    %li.active
-      %h3
-        %a
-          取引中
-    %li
-      %h3
-        %a
-          過去の取引
-  .tab-content
-    %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
-      %li.mypage-item-not-found.bold
+  %ul.purchased--mypageTabs
+    %li.purchased--mypageTabs__enRoute
+      = link_to "取引中" , class: "enRoute"
+    %li.purchased--mypageTabs__settled
+      = link_to "過去の取引" , class: "settled"
+  .purchased--tabContent
+    %ul.purchased--tabContent__transactionNow
+      %li.transactionNotFound
         取引中の商品がありません
-    %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
-      %li.mypage-item-not-found.bold
-        過去に取引した商品がありません
+    %ul.purchased--tabContent__transactionOld
+

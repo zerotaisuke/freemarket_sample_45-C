@@ -1,0 +1,68 @@
+body{
+  background:#f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+.l-container {
+  margin: 24px auto 0;
+  padding: 0 0 40px;
+  .l-content {
+    .mypageUserIcon {
+      position: relative;
+      height: 155px;
+      padding: 20px;
+      background: url(top_image/user-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      .profileLink{
+        display: block;
+        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        color: #333;
+        &__figureImage {
+            display: inline-block;
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        &__userName {
+          margin: 8px 0 0;
+          font-size: 14px;
+        }
+        &__mypageCount {
+          margin: 8px 0 0;
+          font-size: 0;
+          &__evaluation {
+            display: inline-block;
+            font-size: 14px;
+            .evaluationCount {
+              display: inline-block;
+              margin: 0 0 0 8px;
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+          &__listingNumber{
+            display: inline-block;
+            margin: 0 0 0 16px;
+            font-size: 14px;
+            .listingNumberCount {
+              display: inline-block;
+              margin: 0 0 0 8px;
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

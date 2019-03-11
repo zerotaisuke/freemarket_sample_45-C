@@ -1,21 +1,20 @@
 = render 'items/header'
-%main.l-container.clearfix
+.l-container.clearfix
   .l-content
-    %section.mypage-user-icon
-      %a{:img => "user-bg.jpg"}
-        %figure
-          %img{:src => "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", :width => "60"}/
-
-        %h2.bold
+    .mypageUserIcon
+      = link_to(class: "profileLink") do
+        .profileLink__figureImage
+          = image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: "60", class: "avator_image")
+        .profileLink__userName
           ユーザーネーム
-        .mypage-number
-          %div
+        .profileLink__mypageCount
+          .profileLink__mypageCount__evaluation
             評価
-            %span.bold
+            .evaluationCount.bold
               0
-          %div
+          .profileLink__mypageCount__listingNumber
             出品数
-            %span.bold
+            .listingNumberCount.bold
               0
     = render 'notification-todo'
     = render 'purchased'

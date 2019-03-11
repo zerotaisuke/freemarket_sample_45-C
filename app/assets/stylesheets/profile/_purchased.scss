@@ -1,0 +1,53 @@
+.purchased {
+  margin: 40px 0 0;
+  background: #fff;
+  &__tabHead {
+    padding: 0 4%;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 72px;
+  }
+  &--mypageTabs{
+    border: 0;
+    background: #eee;
+    font-size: 0;
+    &__enRoute{
+      border-top: 2px solid #ea352d;
+      color: #333;
+      font-size: 16px;
+      line-height: 72px;
+      background: #fff;
+      width: 50%;
+      text-align: center;
+    }
+    &__settled{
+      text-align: center;
+      font-size: 16px;
+      width: 50%;
+    }
+  }
+  &--tabContent{
+    &__transactionNow{
+      .transactionNotFound{
+        border: 0;
+        padding: 160px 0 60px;
+        background: url(https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?6820409);
+        background-repeat: no-repeat;
+        background-position: center 40px;
+        background-size: 78px 85px;
+        text-align: center;
+        font-size: 16px;
+        color: #ccc;
+        width: 100%;
+      }
+    }
+    &__transactionOld{
+      position: relative;
+      display: block;
+      color: #333;
+      font-size: 16px;
+      line-height: 72px;
+
+    }
+  }
+}
