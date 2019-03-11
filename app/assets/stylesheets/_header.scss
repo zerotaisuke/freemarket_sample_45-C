@@ -36,9 +36,10 @@ header{
   }
 }
 input{
+
   width: calc(100% - 150px);
   float:right;
-  margin-top: 10px;
+  margin-top: 15px;
   padding-top: 5px;
 }
 p.left{
@@ -50,7 +51,7 @@ p.right{
 
 // ヘッダーの下の部分
 .header__navi{
-  @include height_width(38px,100%);
+  @include height_width(50px,100%);
   font-size: 14px;
   padding-top: 15px;
   @include flex_start();
@@ -69,7 +70,11 @@ p.right{
 
       }
     }
-
+.mypage_logo{
+  @include height_width(25px,25px);
+  border-radius: 50%;
+  
+}
 .top_banner__main_image{
   width: 100%;
   vertical-align: bottom;
