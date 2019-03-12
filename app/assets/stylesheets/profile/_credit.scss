@@ -1,12 +1,10 @@
 .original-clearfix{
-  // width: 700px;
   margin: 24px auto 0;
   padding:0 0 40px;
 }
 
 .content{
   width: 700px;
-  // float: none;
 }
 
   .l-chapter {
@@ -51,6 +49,10 @@
       margin: 0 auto;
       position: relative;
       text-align: left;
+    }
+    &__vasalogo{
+      height:15px;
+      width:49px;
     }
     &__creditnumber {
       margin-top: 8px;
