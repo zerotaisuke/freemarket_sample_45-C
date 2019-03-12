@@ -11,4 +11,14 @@ class ProfilesController < ApplicationController
   def new
   end
 
+  def logout
+  end
+
+  def credit1
+  end
+
+  def credit2
+  end
+
+
 end
