@@ -8,4 +8,8 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
   end
+
+  def search
+  	 @items = Item.where('title LIKE(?)', "%#{params[:keyword]}%").limit(1)
+  end
 end

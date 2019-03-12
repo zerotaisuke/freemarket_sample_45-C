@@ -36,11 +36,25 @@ header{
   }
 }
 input{
-
-  width: calc(100% - 150px);
-  float:right;
-  margin-top: 15px;
-  padding-top: 5px;
+    height: 36px;
+    background: #fafafa;
+    transition: all ease-out .3s;
+    width: calc(100%);
+    float:right;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.search{
+    height: 36px;
+    background: #fafafa;
+    transition: all ease-out .3s;
+    width: calc(100% - 150px);
+    float:right;
+    // margin-top: 10px;
+    border-radius: 4px;
+  }
+.search_btn{
+visibility:hidden;
 }
 p.left{
   width: 180px;
@@ -73,7 +87,6 @@ p.right{
 .mypage_logo{
   @include height_width(25px,25px);
   border-radius: 50%;
-  
 }
 .top_banner__main_image{
   width: 100%;
