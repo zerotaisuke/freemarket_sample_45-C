@@ -7,4 +7,18 @@ class ProfilesController < ApplicationController
 
   def edit
   end
+
+  def new
+  end
+
+  def logout
+  end
+
+  def credit1
+  end
+
+  def credit2
+  end
+
+
 end
