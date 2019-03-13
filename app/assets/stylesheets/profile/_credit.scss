@@ -1,0 +1,101 @@
+.original-clearfix{
+  margin: 24px auto 0;
+  padding:0 0 40px;
+}
+
+.content{
+  width: 700px;
+}
+
+  .l-chapter {
+    width:700px;
+    background-color: white;
+    text-align: center;
+    &__container1 {
+    }
+
+    &__head {
+      height: 50px;
+      font-size: 24px;
+      padding: 8px 24px;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      border-bottom: 3px solid #eee;
+    }
+    &__credit--text {
+      font-weight: bold;
+      display: table-cell;
+    }
+    &__inner {
+      float: none;
+      padding: 64px;
+    }
+    &__content {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    &__settings-payment-list {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+    }
+    &__creditlist {
+      padding: 24px 0;
+      margin:  0 auto;
+      width: 320px;
+    }
+    &__creditcard {
+      max-width: 320px;
+      margin: 0 auto;
+      position: relative;
+      text-align: left;
+    }
+    &__vasalogo{
+      height:15px;
+      width:49px;
+    }
+    &__creditnumber {
+      margin-top: 8px;
+      font-size: 16px;
+      text-align: left;
+    }
+    &__creditdate {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+    &__button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 4px 6px;
+      background: #fff;
+      border-radius: 3px;
+      border: 1px solid #ea352d;
+      color: #ea352d;
+    }
+    &__cash {
+      display: block;
+      margin: 40px 0 0;
+      text-align: right;
+      color: #0099e8;
+      text-decoration: none;
+    }
+    &__back {
+      vertical-align: middle;
+      font-size: 15px;
+    }
+    &__logout {
+      background-color: #ea352d;
+      border:1px solid #ea352d;
+      color:#fff;
+      height: 50px;
+      padding: 15px 5px;
+    }
+    &__logout-text {
+      color:#fff;
+      font-size:inherit;
+      text-align: center;
+    }
+}
+
+
