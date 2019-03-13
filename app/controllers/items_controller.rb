@@ -3,6 +3,16 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Items.find(1)
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   def new
