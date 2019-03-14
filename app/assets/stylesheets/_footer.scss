@@ -1,7 +1,7 @@
 @import "./variable";
 /*フッタートップ画像ついている方*/
 .footer__top_banner{
-	background: url(top_image/designer__s_room__by_k3nzus.png);
+  background-image: image-url("top_image/designer__s_room__by_k3nzus.png");
   @include height_width(260px,100vw);
 
   &__mobile{
