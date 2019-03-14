@@ -4,18 +4,17 @@
     .item-content-area__text 商品の情報を入力
     = form_with model: @item, local: true do |f|
       // 出品画像
-      = f.fields_for :image do |i|
-        .item-image.box
-          .item-box-header
-            %span.item-box-header__big-title 出品画像
-            %span.item-box-header__must-icon 必須
-          .item-image__infomation
-            最大10枚までアップロードできます
-          .item-image__uploadarea
-            = i.file_field :images, style: "display: none", class: "image-upload", id: "image-upload", multiple: "true"
-            .item-image__uploadarea-text{onClick: "$('#image-upload').click();"}
-              %p.image-message ドラッグアンドドロップ
-              %p.image-message またはクリックしてファイルをアップロード
+      .item-image.box
+        .item-box-header
+          %span.item-box-header__big-title 出品画像
+          %span.item-box-header__must-icon 必須
+        .item-image__infomation
+          最大10枚までアップロードできます
+        .item-image__uploadarea
+          = f.file_field :avatar, style: "display: none", class: "image-upload", id: "image-upload", multiple: "true"
+          .item-image__uploadarea-text{onClick: "$('#image-upload').click();"}
+            %p.image-message ドラッグアンドドロップ
+            %p.image-message またはクリックしてファイルをアップロード
 
       // 商品名
       .item-data.box
@@ -26,7 +25,7 @@
         .item-box-header__next
           %span.item-box-header__small-title 商品説明
           %span.item-box-header__must-icon 必須
-        = f.text_area :name, class: "item-data__detail text-area", placeholder: "商品の説明（1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+        = f.text_area :description, class: "item-data__detail text-area", placeholder: "商品の説明（1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
 
       // 商品の詳細
       .item-detail.box.flexbox
@@ -35,11 +34,11 @@
           .item-box-header
             %span.item-box-header__small-title カテゴリー
             %span.item-box-header__must-icon 必須
-          = f.select :name, ["---", "レディース", "メンズ", "ベビー・キッズ"], {}, {class: "item-detail__category select-field"}
+          = f.select :category_id, ["---", "レディース", "メンズ", "ベビー・キッズ"], {}, {class: "item-detail__category select-field"}
           .item-box-header__next
             %span.item-box-header__small-title 商品の状態
             %span.item-box-header__must-icon 必須
-          = f.select :name, ["---", "新品、未使用", "未使用に近い", "目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"], {}, {class: "item-detail__status select-field"}
+          = f.select :status, ["---", "新品、未使用", "未使用に近い", "目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"], {}, {class: "item-detail__status select-field"}
 
       // 配送詳細
       .item-delivery.box.flexbox
@@ -48,15 +47,15 @@
           .item-box-header
             %span.item-box-header__small-title 配送料の負担
             %span.item-box-header__must-icon 必須
-          = f.select :name, ["---", "送料込み(出品者負担)", "着払い(購入者負担)"], {}, {class: "item-delivery__fee select-field"}
+          = f.select :delivery_charge_burden, ["---", "送料込み(出品者負担)", "着払い(購入者負担)"], {}, {class: "item-delivery__fee select-field"}
           .item-box-header__next
             %span.item-box-header__small-title 発送元の地域
             %span.item-box-header__must-icon 必須
-          = f.select :name, ["---", "ここは後日active_hash"], {}, {class: "item-delivary__area select-field"}
+          = f.select :prefecture, ["---", "ここは後日active_hash"], {}, {class: "item-delivary__area select-field"}
           .item-box-header__next
             %span.item-box-header__small-title 発送までの日数
             %span.item-box-header__must-icon 必須
-          = f.select :name, ["---","1〜2日で発送","2〜3日で発送","4〜7日で発送"], {}, {class: "item-delivary__days select-field"}
+          = f.select :days_up_to_delivery, ["---","1〜2日で発送","2〜3日で発送","4〜7日で発送"], {}, {class: "item-delivary__days select-field"}
       // 料金
       .item-price.box.flexbox
         .left-side
@@ -70,7 +69,7 @@
                 %span.item-box-header__must-icon 必須
             .right-side-right
               %span.yen-mark ¥
-              = f.text_field :name, placeholder: "例）300", class: "item-price__sell text-field text-field__mini"
+              = f.text_field :price, placeholder: "例）300", class: "item-price__sell text-field text-field__mini"
           .right-side-second.flexbox.pad-2.bar
             .right-side-left
               %p.fee 販売手数料(10%)
