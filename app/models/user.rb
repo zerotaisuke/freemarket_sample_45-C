@@ -2,6 +2,9 @@ class User < ApplicationRecord
 
   has_one :profile
   accepts_nested_attributes_for :profile
+  has_many :items
+  has_many :trades, inverse_of: 'saler_user'
+  has_many :trades, inverse_of: 'parcaser_user'
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
