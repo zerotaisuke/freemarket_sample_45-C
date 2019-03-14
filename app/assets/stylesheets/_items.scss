@@ -4,7 +4,7 @@
 .pickup_container{
 	background-color: $thin_gray;
   padding-top: 40px;
-  @include height_width(270vh,100%);
+  @include height_width(100%,100%);
 
   &__message{
     text-align: center;
@@ -64,7 +64,7 @@
 
 // アイテム欄個別
 .item_box_body{
-  @include height_width(117px,100%);
+  @include height_width(117px,200px);
   margin-left:20px;
   margin-right:20px;
   position:relative;

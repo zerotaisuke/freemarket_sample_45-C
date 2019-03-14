@@ -3,14 +3,12 @@
 .footer__top_banner{
 	background: url(top_image/designer__s_room__by_k3nzus.png);
   @include height_width(260px,100vw);
-  position:relative;
 
   &__mobile{
-    position:absolute;
-    right:400px;
+
   }
     &__message{
-      position:relative;
+
       top:50px;
       left:350px;
       color:$white;
@@ -18,31 +16,36 @@
       font-weight:bold;
     }
       .mercari_radius{
-        radius-border: 10px;
-        position:relative;
-        top:90px;
-        left:350px;
+        @include height_width(80px,80px);
       }
         .apple_logo_bottom{
-          position:relative;
-          top:15px;
-          left:225px;
+          @include height_width(50px,150px);
         }
           .google_logo_bottom{
-            position:relative;
-            top:-10px;
-            left:600px;
+            @include height_width(50px,150px);
   }
 }
+.footer__top_banner__message{
+  @include height_width(250px,400px);
+  margin:0 auto;
+  padding-top: 50px;
+}
+.mercari_logo_bottom{
+   @include height_width(500px,500px);
+}
+.footer__top_banner__image{
+  @include height_width(200px,400px);
+  margin:auto;
+}
+
 // フッターメッセージ文字サイズ
-span{
+span.download_message{
   font-size:30px;
 }
 /*フッター黒*/
 .footer__bottom__banner{
   background-color: #222222;
   @include height_width(500px,100vw);
-
   padding-top: 50px;
   @include padding_side(150px,150px);
   display:flex;

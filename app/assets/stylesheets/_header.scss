@@ -25,6 +25,7 @@
 header{
   @include height_width(100px,100vw);
   @include padding_side(200px,200px);
+  background-color: #FFFFFF;
   position:relative;
 
   &__mercari {
@@ -50,7 +51,6 @@ input{
     transition: all ease-out .3s;
     width: calc(100% - 150px);
     float:right;
-    // margin-top: 10px;
     border-radius: 4px;
   }
 .search_btn{
