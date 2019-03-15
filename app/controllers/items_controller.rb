@@ -1,8 +1,11 @@
 class ItemsController < ApplicationController
+  before_action :set_target_item, only: %i[show edit update destroy]
+
   def index
   end
 
   def show
+
   end
 
   def new
@@ -19,6 +22,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    @item.destroy
+  end
+
   private
 
   def item_params
@@ -32,5 +45,10 @@ class ItemsController < ApplicationController
                                  :days_up_to_delivery,
                                  :price).merge(user_id: current_user.id)
   end
+
+  def set_target_task
+    @item = Item.find(params[:id])
+  end
+
 
 end
