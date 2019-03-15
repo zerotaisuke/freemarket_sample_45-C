@@ -1,10 +1,10 @@
 %header
   .header__mercari
     = image_tag "top_image/logo.svg", class: 'mercari_logo'
-    = form_with url: items_path, method: :get, local: true, class: 'search' do |f|
+    = form_with url: items_path, method: :get, local: true,class: 'search' do |f|
       .form-group
-        = f.text_field  class: 'search'
-      = f.submit 'Search', class: 'search_btn', name: nil
+        = f.text_field :class => 'search', name: 'keyword'
+      = f.submit 'Search', class: 'search_btn'
 
   .header__navi
     .header__navi__left
@@ -17,4 +17,3 @@
       %p.right お知らせ
       %i.fas.fa-check
       %p.right やることリスト
-
