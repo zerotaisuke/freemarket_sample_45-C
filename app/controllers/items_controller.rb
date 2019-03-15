@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     if @item.save
-      redirect_to items_path, notice: "タスク「#{@item.name}」を登録しました。"
+      redirect_to items_path, notice: "「#{@item.name}」を出品しました。"
     else
       render :new
     end
