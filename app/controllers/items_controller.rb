@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
                                  :price).merge(user_id: current_user.id)
   end
 
-  def set_target_task
+  def set_target_item
     @item = Item.find(params[:id])
   end
 
