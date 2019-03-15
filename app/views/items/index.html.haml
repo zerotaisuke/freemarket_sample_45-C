@@ -1,7 +1,3 @@
-/ = link_to 'ログアウト', destroy_user_session_path, method: :delete
-/ = link_to '新規登録', new_user_registration_path
-/ = link_to 'ログイン', new_user_session_path
-
 .default-container
   = render 'header'
 .top_banner
@@ -11,30 +7,133 @@
   %h3.pickup_container__message
     ピックアップアイテム
   .new_pickup__category
-    = render 'ladies'
+    %p.new_pickup__category__ladies_new__message
+      レディース新着アイテム
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            = image_tag "#{item.image}", :size => "213x213"
+            .item_box_body
+              .item_box_body__name
+                = item.name
+              .item_box_body__num
+                .item_box_body__num__price
+                  = item.price
+                .item_box_body__num__tax (税込)
+                %i.far.fa-heart 4
+
 
   .new_pickup__category
-    = render 'mens'
+    %p.new_pickup__category__ladies_new__message
+      メンズ新着アイテム
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            = image_tag "#{item.image}", :size => "213x213"
+            .item_box_body
+              .item_box_body__name
+                = item.name
+              .item_box_body__num
+                .item_box_body__num__price
+                  = item.price
+                .item_box_body__num__tax (税込)
+                %i.far.fa-heart 4
 
   .new_pickup__category
-    = render 'baby'
-
+    %p.new_pickup__category__ladies_new__message
+      ベビーキッズ新着アイテム
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            = image_tag "#{item.image}", :size => "213x213"
+            .item_box_body
+              .item_box_body__name
+                = item.name
+              .item_box_body__num
+                .item_box_body__num__price
+                  = item.price
+                .item_box_body__num__tax (税込)
+                %i.far.fa-heart 4
   .new_pickup__category
-    = render 'cosme'
-
+    %p.new_pickup__category__ladies_new__message
+      コスメ・香水・美容新着アイテム
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            = image_tag "#{item.image}", :size => "213x213"
+            .item_box_body
+              .item_box_body__name
+                = item.name
+              .item_box_body__num
+                .item_box_body__num__price
+                  = item.price
+                .item_box_body__num__tax (税込)
+                %i.far.fa-heart 4
 .pickup_container
   %h3.pickup_container__message
     ピックアップブランド
   .new_pickup__category
-    = render 'chanel'
+    %p.new_pickup__category__ladies_new__message
+      シャネル新着アイテム
+    .new_pickup__category__new
+      - @items.each do |item|
+        .new_pickup__category__new__contents_box
+          = image_tag "#{item.image}", :size => "213x213"
+          .item_box_body
+            .item_box_body__name
+              = item.name
+            .item_box_body__num
+              .item_box_body__num__price
+                = item.price
+              .item_box_body__num__tax (税込)
+              %i.far.fa-heart 4
 
   .new_pickup__category
-    = render 'louis'
+    %p.new_pickup__category__ladies_new__message
+      ルイ・ヴィトン新着アイテム
+    .new_pickup__category__new
+      - @items.each do |item|
+        .new_pickup__category__new__contents_box
+          = image_tag "#{item.image}", :size => "213x213"
+          .item_box_body
+            .item_box_body__name
+              = item.name
+            .item_box_body__num
+              .item_box_body__num__price
+                = item.price
+              .item_box_body__num__tax (税込)
+              %i.far.fa-heart 4
 
   .new_pickup__category
-    = render 'supreme'
+    %p.new_pickup__category__ladies_new__message
+      シュプリーム新着アイテム
+    .new_pickup__category__new
+      - @items.each do |item|
+        .new_pickup__category__new__contents_box
+          = image_tag "#{item.image}", :size => "213x213"
+          .item_box_body
+            .item_box_body__name
+              = item.name
+            .item_box_body__num
+              .item_box_body__num__price
+                = item.price
+              .item_box_body__num__tax (税込)
+              %i.far.fa-heart 4
 
   .new_pickup__category
-    = render 'nike'
+    %p.new_pickup__category__ladies_new__message
+      ナイキ新着アイテム
+    .new_pickup__category__new
+      - @items.each do |item|
+        .new_pickup__category__new__contents_box
+          = image_tag "#{item.image}", :size => "213x213"
+          .item_box_body
+            .item_box_body__name
+              = item.name
+            .item_box_body__num
+              .item_box_body__num__price
+                = item.price
+              .item_box_body__num__tax (税込)
+              %i.far.fa-heart 4
 
 = render 'footer'
