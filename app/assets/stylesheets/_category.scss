@@ -1,0 +1,87 @@
+.category-index{
+
+//全体
+  &__wrapper{
+    width: 700px;
+    margin: 40px auto;
+  }
+//ヘッダー部分
+  &__header{
+    padding: 8px 0;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+
+  &__list{
+  min-width: 80px;
+  height: 40px;
+  box-shadow: 1px 1px 1px 1px rgba(14,14,14,0.0580392);
+  margin: 5px;
+  color: #333;
+  font-size: 16px;
+  line-height: 40px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 10px;
+
+
+  &__text{
+    text-align: center;
+    margin: 0px 18px;
+    text-decoration: none;
+    color: black;
+    }
+  }
+
+//各カテゴリー
+  &__box{
+    margin: 30px auto;
+    &__conteiner{
+    height: 100%;
+    color: black;
+    background-color: #fff;
+    }
+    &__parrent-name{
+    font-size: 26px;
+    background-color: #d84638;
+    height: 45px;
+    vertical-align: middle;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 45px;
+    border-radius: 10px;
+    }
+    &__all-check{
+    text-decoration: none;
+    color: #3F98E2;
+    margin: 20px;
+      :hover{
+      opacity: 0.7;
+      text-decoration: underline;
+      }
+    }
+    &__child-name{
+    margin: 5px;
+    margin-left: 20px;
+    font-weight: bold;
+    }
+    &__grand-child-list{
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 500px;
+      margin: 26px;
+    }
+    &__grand-child-name{
+      font-size: 14px;
+      text-decoration: none;
+      color: #3F98E2;
+      width: 48%;
+      margin: 5px;
+      :hover {
+        opacity: 0.7;
+        text-decoration: underline;
+      }
+    }
+  }
+}
