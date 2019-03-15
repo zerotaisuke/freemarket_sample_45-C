@@ -11,7 +11,7 @@
         .item-image__infomation
           最大10枚までアップロードできます
         .item-image__uploadarea
-          = f.file_field :avatar, style: "display: none", class: "image-upload", id: "image-upload", multiple: "true"
+          = f.file_field :avatar, style: "display: none", class: "image-upload", id: "image-upload"
           .item-image__uploadarea-text{onClick: "$('#image-upload').click();"}
             %p.image-message ドラッグアンドドロップ
             %p.image-message またはクリックしてファイルをアップロード
