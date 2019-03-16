@@ -5,12 +5,12 @@
       .personalInfomation
         %h2.personalHead 本人情報の登録
         %form.personalBody{action: "", method: "POST", novalidate: ""}
-          .confirmation
-            %p.confirmation__description
+          .confirmation-info
+            %p.confirmation-info__description
               お客さまの本人情報をご登録ください。
               %br>/
               登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
-            %p.confirmation__descriptionDetail
+            %p.confirmation-info__descriptionDetail
               = link_to "本人確認書類のアップロードについて" , class: "upload"
               %i.fas.fa-chevron-right
           .formBoard
@@ -47,8 +47,8 @@
             %span.formBoard__arbitrary 任意
             %input.formBoard__inputDefault{name: "address2", placeholder: "例) ユタカビル7階", type: "text", value: ""}/
           %button.btnRegist{type: "submit"} 登録する
-          .confirmation.another
-            %p.confirmation__descriptionDetail
+          .confirmation-info.another
+            %p.confirmation-info__descriptionDetail
               = link_to "本人情報の登録について" , class: "regist"
               %i.fas.fa-chevron-right
           %input.personalData{type: "hidden", value: ""}/
