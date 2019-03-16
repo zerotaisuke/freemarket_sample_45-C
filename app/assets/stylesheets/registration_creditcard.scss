@@ -13,75 +13,14 @@
 
 .editingscreen{
   max-width: 320px;
-  margin: 0 auto;
-
-  &__expiration_date{
-    width: 100%;
-  }
-
-  &__expiration_date_monthyear{
-      display: inline-block;
-      width: 35%;
-
-    &--select-default{
-        position: relative;
-        z-index: 2;
-        height: 48px;
-        padding: 0 16px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        background: 0;
-        font-size: 16px;
-        line-height: 1.5;
-        cursor: pointer;
-        width: 100px;
-    }
-  }
+  margin: -40px auto;
 }
 
-  .visalogo{
-    height:20px;
-    width: 34px;
-  }
-
-  .masterlogo{
-    height:20px;
-    width: 30px;
-  }
-
-  .saisonlogo{
-    height:20px;
-    width: 32px;
-  }
-
-  .jcblogo{
-    height:20px;
-    width: 32px;
-  }
-
-  .americanlogo{
-    height:20px;
-    width: 21px;
-  }
-
-  .dinersclublogo{
-    height:20px;
-    width: 32px;
-  }
-
-  .discoverlogo{
-    height:20px;
-    width: 32px;
-  }
-
-  .monthyear{
-    font-size: 15px;
-  }
-
 .form-group{
-    margin: 40px 0 0;
-    width: 100%;
+  margin: 40px 0 0;
+  width: 100%;
 
+// #共通部分
   &__toptext{
     font-weight: 600;
     font-size: 14px;
@@ -109,6 +48,64 @@
   font-size: 16px;
   }
 
+  // #クレジットカードロゴ部分
+  &__signup-card-logo{
+    &--visa{
+      @include height_width(20px,34px);
+    }
+    &--master{
+    @include height_width(20px,32px);
+  }
+
+    &--saison{
+      @include height_width(20px,32px);
+    }
+
+    &--jcb{
+      @include height_width(20px,32px);
+    }
+
+    &--american{
+      @include height_width(20px,21px);
+    }
+
+    &--dinersclub{
+      @include height_width(20px,32px);
+    }
+
+    &--discover{
+      @include height_width(20px,32px);
+    }
+  }
+
+  // #有効期限年月年月部分
+  &__expiration_date{
+    width: 100%;
+  }
+
+  &__expiration_date_monthyear{
+      display: inline-block;
+      width: 35%;
+
+    &--select-default{
+        position: relative;
+        z-index: 2;
+        height: 48px;
+        padding: 0 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        cursor: pointer;
+        width: 100px;
+    }
+  }
+  &__monthyeartext{
+    font-size: 15px;
+  }
+
+  // #セキュリティコード補足説明以下部分
   &__form-question {
     display: inline-block;
     width: 14px;

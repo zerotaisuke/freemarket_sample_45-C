@@ -5,31 +5,32 @@
     %h2.l-chapter-credithead クレジットカード情報入力
     %form#add-card-form.l-single-inner
       .editingscreen
-        %label.form-group__toptext カード番号
-        %span.form-group__form-require 必須
-        %input#payment_card_no.form-group__input-default{"data-input-type" => "card", :maxlength => "19", :placeholder => "半角数字のみ", :type => "text", :value => ""}/
-        %ul.signup-card-list
-          %li
-            = image_tag("credit_logo/visa_logo.svg",class:'visalogo')
-          %li
-            = image_tag("credit_logo/master-card.svg",class:'masterlogo')
-          %li
-            = image_tag("credit_logo/saison-card.svg",class:'saisonlogo')
-          %li
-            = image_tag("credit_logo/jcb.svg",class:'jcblogo')
-          %li
-            = image_tag("credit_logo/american_express.svg",class:'americanlogo')
-          %li
-            = image_tag("credit_logo/dinersclub.svg",class:'dinersclublogo')
-          %li
-            = image_tag("credit_logo/discover.svg",class:'discoverlogo')
         .form-group
-          .editingscreen__expiration_date
+          %label.form-group__toptext カード番号
+          %span.form-group__form-require 必須
+          %input#payment_card_no.form-group__input-default{"data-input-type" => "card", :maxlength => "19", :placeholder => "半角数字のみ", :type => "text", :value => ""}/
+          %ul.form-group__signup-card-logo
+            %li
+              = image_tag("credit_logo/visa_logo.svg",class:'form-group__signup-card-logo--visa')
+            %li
+              = image_tag("credit_logo/master-card.svg",class:'form-group__signup-card-logo--master')
+            %li
+              = image_tag("credit_logo/saison-card.svg",class:'form-group__signup-card-logo--saison')
+            %li
+              = image_tag("credit_logo/jcb.svg",class:'form-group__signup-card-logo--jcb')
+            %li
+              = image_tag("credit_logo/american_express.svg",class:'form-group__signup-card-logo--american')
+            %li
+              = image_tag("credit_logo/dinersclub.svg",class:'form-group__signup-card-logo--dinersclub')
+            %li
+              = image_tag("credit_logo/discover.svg",class:'form-group__signup-card-logo--discover')
+        .form-group
+          .form-group__expiration_date
           %label.form-group__toptext{:for => "payment_card_expire"} 有効期限
           %span.form-group__form-require 必須
           %br/
-          .editingscreen__expiration_date_monthyear
-            %select#payment_card_expire_mm.editingscreen__expiration_date_monthyear--select-default
+          .form-group__expiration_date_monthyear
+            %select#payment_card_expire_mm.form-group__expiration_date_monthyear--select-default
               %option{:value => "01"} 01
               %option{:value => "02"} 02
               %option{:value => "03"} 03
@@ -43,10 +44,10 @@
               %option{:value => "11"} 11
               %option{:value => "12"} 12
             %i.icon-arrow-bottom
-          %span.monthyear 月
+          %span.form-group__monthyeartext 月
           %ul#expire-mm-error-wrapper.has-error-text
-          .editingscreen__expiration_date_monthyear
-            %select#payment_card_expire_yy.editingscreen__expiration_date_monthyear--select-default
+          .form-group__expiration_date_monthyear
+            %select#payment_card_expire_yy.form-group__expiration_date_monthyear--select-default
               %option{:value => "19"} 19
               %option{:value => "20"} 20
               %option{:value => "21"} 21
@@ -59,7 +60,7 @@
               %option{:value => "28"} 28
               %option{:value => "29"} 29
             %i.icon-arrow-bottom
-          %span.monthyear 年
+          %span.form-group__monthyeartext 年
         .form-group
           %label.form-group__toptext セキュリティコード
           %span.form-group__form-require 必須
