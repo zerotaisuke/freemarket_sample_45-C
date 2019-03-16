@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :profiles, only: [:index, :show, :edit, :new]
   get 'logout', to: 'profiles#logout'
-  get 'credit1', to: 'profiles#credit1'
+  get 'registration_creditcard', to: 'profiles#registration_creditcard'
   get 'credit2', to: 'profiles#credit2'
 
   namespace :admin do
