@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
   def logout
   end
 
-  def credit1
+  def registration_creditcard
   end
 
   def credit2
