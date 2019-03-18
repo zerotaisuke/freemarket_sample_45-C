@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_064252) do
+ActiveRecord::Schema.define(version: 2019_03_14_062857) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -49,12 +49,13 @@ ActiveRecord::Schema.define(version: 2019_03_14_064252) do
     t.string "delivery_charge_burden", null: false
     t.string "days_up_to_delivery", null: false
     t.string "prefecture", null: false
+    t.integer "brand_id"
+    t.integer "category_id"
+    t.bigint "user_id", null: false
+    t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
-    t.integer "brand_id"
-    t.integer "user_id"
-    t.string "description", null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -77,26 +78,27 @@ ActiveRecord::Schema.define(version: 2019_03_14_064252) do
     t.string "status", default: "未成約", null: false
     t.integer "parcaser_evaluation", default: 0, null: false
     t.integer "saler_evaluation", default: 0, null: false
-    t.bigint "item_id"
-    t.integer "saler_user_id"
     t.integer "parcaser_user_id"
+    t.integer "saler_user_id"
+    t.bigint "item_id"
     t.index ["item_id"], name: "index_trades_on_item_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "uid"
+    t.string "provider"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "provider"
-    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "items", "users"
   add_foreign_key "trades", "items"
 end
