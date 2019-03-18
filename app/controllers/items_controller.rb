@@ -30,11 +30,17 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    if @item.destroy
-      redirect_to item_path, notice: "「#{@item.name}」を削除しました"
+
+    unless @item.user_id == current_user.id
+      redirect_to items_path, notice: "出品者でないため削除できません"
     else
-      render :show
+      if @item.destroy
+        redirect_to items_path, notice: "「#{@item.name}」を削除しました"
+      else
+        render :show
+      end
     end
+
   end
 
   private
