@@ -10,5 +10,5 @@ FactoryBot.define do
     description               Faker::JapaneseMedia::DragonBall.character + "が手作りした" + Faker::Movie.quote
     user
   end
-
+  
 end
