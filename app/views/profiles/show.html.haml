@@ -1,15 +1,16 @@
-= render 'items/header'
-.l-container.clearfix
-  .l-content
-    .profileboard
-      %h2.boardhead プロフィール
-      %form.boardform{action: "", method: "POST"}
-        .boardform__namecard
-          .boardform__namecard--profileicon
-            = image_tag("//static.mercdn.net/images/member_photo_noimage_thumb.png", size: "60x60")
-          %input.boardform__namecard--namespace{name: "nickname", placeholder: "例)ニックネームorタイトル", type: "text", value: ""}/
-        .boardform__profilecontent
-          %textarea.boardform__profilecontent--bulletin{name: "introduction", placeholder: "例）取扱商品とか人物紹介とか連絡方法とかとか"}
-          %button.boardform__profilecontent--changebtn{type: "submit"} 変更する
-  = render 'l-side'
-= render 'items/footer'
+.main-content
+  = render 'items/header'
+  .l-container.clearfix
+    .l-content
+      .profileboard
+        %h2.boardhead プロフィール
+        %form.boardform{action: "", method: "POST"}
+          .boardform__namecard
+            .boardform__namecard--profileicon
+              = image_tag("//static.mercdn.net/images/member_photo_noimage_thumb.png", size: "60x60")
+            %input.boardform__namecard--namespace{name: "nickname", placeholder: "例)ニックネームorタイトル", type: "text", value: ""}/
+          .boardform__profilecontent
+            %textarea.boardform__profilecontent--bulletin{name: "introduction", placeholder: "例）取扱商品とか人物紹介とか連絡方法とかとか"}
+            %button.boardform__profilecontent--changebtn{type: "submit"} 変更する
+    = render 'l-side'
+  = render 'items/footer'

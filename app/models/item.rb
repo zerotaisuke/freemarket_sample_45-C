@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  belongs_to :category
   has_one_attached :avatar
   has_one :trade
   belongs_to :user
