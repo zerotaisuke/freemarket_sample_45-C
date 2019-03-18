@@ -1,0 +1,26 @@
+= render "items/header"
+
+.main-content
+  .l-container.clearfix
+    .l-content
+      .l-chapter
+        %section.l-chapter__container1
+          %h2.l-chapter__head 支払い方法
+          .l-chapter__inner
+            %section
+              .l-chapter__content
+                %h3.l-chapter__credit--text クレジットカード一覧
+                %ul.l-chapter__settings-payment-list
+                  %li.l-chapter__creditlist
+                    %form.l-chapter__creditcard
+                      %figure
+                        = image_tag("credit_logo/visa_logo.svg",class:'l-chapter__vasalogo')
+                      .l-chapter__creditnumber **************
+                      .l-chapter__creditdate **/**
+                      %button.l-chapter__button{:type => "submit"} 削除する
+          .l-chapter__footer
+            %a.l-chapter__cash{href:"#"}
+              %span.l-chapter__back 支払い方法について＞
+    = render "l-side"
+
+= render "items/footer"

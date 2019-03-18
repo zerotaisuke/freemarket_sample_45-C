@@ -4,7 +4,7 @@
 .pickup_container{
 	background-color: $thin_gray;
   padding-top: 40px;
-  @include height_width(270vh,100%);
+  @include height_width(100%,100%);
 
   &__message{
     text-align: center;
