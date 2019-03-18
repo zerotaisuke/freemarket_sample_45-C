@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations',
                                     omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :profiles, only: [:index, :show, :edit, :new]
-  get 'logout', to: 'profiles#logout'
-  get 'credit1', to: 'profiles#credit1'
-  get 'credit2', to: 'profiles#credit2'
-
+  resources :profiles, only: [:index, :show, :edit, :new] do
+    collection do
+      get 'logout'
+      get 'credit1'
+      get 'credit2'
+  end
+end
+  
   namespace :admin do
     resources :users, only: [:index,:show]
   end
