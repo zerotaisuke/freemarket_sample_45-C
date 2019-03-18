@@ -1,1 +1,23 @@
-test
+.main-content
+  = render 'items/header'
+  .l-container.clearfix
+    .l-content
+      .mypageUserIcon
+        = link_to(class: "profileLink") do
+          .profileLink__figureImage
+            = image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: "60", class: "avator_image")
+          .profileLink__userName
+            ユーザーネーム
+          .profileLink__mypageCount
+            .profileLink__mypageCount__evaluation
+              評価
+              .evaluationCount.bold
+                0
+            .profileLink__mypageCount__listingNumber
+              出品数
+              .listingNumberCount.bold
+                0
+      = render 'notification-todo'
+      = render 'purchased'
+    = render 'l-side'
+  = render 'items/footer'

@@ -1,0 +1,101 @@
+.personalInfomation {
+    .personalHead {
+        font-weight: 600;
+        padding: 8px 24px;
+        border-bottom: 1px solid #f5f5f5;
+        text-align: center;
+        background: #fff;
+        font-size: 24px;
+    }
+    .personalBody {
+        border-top: 1px solid #f5f5f5;
+        padding: 64px;
+        background: #fff;
+        line-height: 1.5;
+        .confirmation-info {
+            &__description {
+                font-size: 14px;
+                margin: 8px 0 0;
+                line-height: 1.5;
+            }
+            &__descriptionDetail {
+                margin: 8px 0 0;
+                text-align: right;
+                font-size: 14px;
+                color: #0099e8;
+                .fas.fa-chevron-right {
+                    color: #0099e8;
+                }
+            }
+        }
+        .formBoard{
+            margin: 40px 0 0;
+            font-size: 14px;
+            &__formHead {
+            font-weight: 600;
+            display: inline-block;
+            }
+            &__formItem {
+                margin: 8px 0 0;
+                line-height: 1.5;
+            }
+            &__arbitrary {
+                margin: 0 0 0 8px;
+                padding: 2px 4px;
+                border-radius: 2px;
+                color: #fff;
+                background: #ccc;
+                font-size: 12px;
+                vertical-align: top;
+            }
+            &__inputDefault {
+                width: 100%;
+                margin: 8px 0 0;
+                box-sizing: border-box;
+                height: 48px;
+                padding: 10px 16px 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: #fff;
+                line-height: 1.5;
+                font-size: 16px;
+            }
+            &__selectWrap {
+                position: relative;
+                background: #fff;
+                margin: 8px 0 0;
+                background: 0;
+                &--prefecture {
+                    width: 100%;
+                    padding: 0 16px;
+                    height: 48px;
+                    border: 1px solid #ccc;
+                    background: 0;
+                    font-size: 16px;
+                    -webkit-appearance: none;
+                }
+                .fas.fa-chevron-down {
+                    position: absolute;
+                    right: 16px;
+                    top: 50%;
+                    margin: 0;
+                    color: #888;
+                    -webkit-transform: translate(0, -50%);
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+        .another{
+            margin: 40px 0 0;
+        }
+        .btnRegist{
+            width: 100%;
+            line-height: 48px;
+            margin: 40px 0 0 0;
+            background: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
