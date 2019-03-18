@@ -274,9 +274,10 @@ p.comment{
 }
 
 .new_pickup__category__individual_new{
-  @include height_width(442px,950px);
+  @include height_width(100%,950px);
   margin: 0 auto;
   @include flex();
+  flex-wrap: wrap;
   padding-left: 130px;
   padding-right: 130px;
 
