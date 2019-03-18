@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
 
   def destroy
     if @item.destroy
-      redirect_to item_path, notice: "「#{@item}」を削除しました"
+      redirect_to item_path, notice: "「#{@item.name}」を削除しました"
     else
       render :show
     end
