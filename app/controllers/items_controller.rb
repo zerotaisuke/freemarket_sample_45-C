@@ -3,16 +3,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Items.find(1)
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+    @item = Item.find(params[:id])
+    @others = Item.where(user_id: @item.user_id).where.not(id: @item.id).order("RAND()").limit(6)
   end
 
   def new
@@ -20,6 +12,5 @@ class ItemsController < ApplicationController
   end
 
   def create
-    
   end
 end

@@ -1,58 +1,7 @@
-
 = render 'header'
 
 .pickup_show
-  .individual_item_container
-    .individual_item_container__item_name
-      どこでもDOOR
-    .individual_item_container__item_flex
-      .individual_item_container__item_image
-        = image_tag "top_image/yjimage.jpg",:class => "showImg"
-      %table
-        %tr.exhibitor
-          %th.exhibitor 出品者
-          %td.exhibitor
-            ぼくドラえもんです
-            %i.fas.fa-smile-beam 5
-            %i.fas.fa-meh 5
-            %i.fas.fa-sad-tear 5
-
-        %tr.category
-          %th.category カテゴリー
-          %td.category 22世紀の道具
-        %tr.show
-          %th.show ブランド
-          %td.show 22世紀
-        %tr.show
-          %th.show 商品のサイズ
-          %td.show 一般的なドアの大きさ
-        %tr.show
-          %th.show 商品の状態
-          %td.show 目立った傷や汚れなし
-        %tr.show
-          %th.show 配送料負担
-          %td.show なし
-        %tr.show
-          %th.show 配送方法
-          %td.show Time Machine
-        %tr.ligion
-          %th.ligion 配送地域
-          %td.ligion 100年後の日本
-        %tr.show
-          %th.show 配送日の目安
-          %td.show 即日配達
-
-    .individual_item_container__item_price  ¥ 1,499
-    .individual_item_container__item_button 購入画面に進む
-    .individual_item_container__item_description
-      %p 漫画『ドラえもん』に登場するひみつ道具の一つ。OPの3番にも登場する。場所を思い浮かべてドアを開けるとその場所に繋がって移動出来る。元の場所に戻るには、ドアを反対側から開けばよい。汎用性が高いため、タケコプター等と並んで登場回数の多い道具でもある。(その汎用性の高さゆえに大長編などではしばしば使用不可能になるのだが)行き先を明確に指定しなくても、それこそ「どこか遠い山奥へ」や「○○がいる（ある）場所」と大雑把に告げても、自動的に手ごろな場所や使用者が目的を果たせる場所へ繋いでくれる。慌てて逃げ込んだ時、特に場所を思い浮かべずに開けた場合でも、行き先受信ノブが使用者の深層心理や願望を反映した場所に繋げてくれる。ただしこれがまた融通が利きすぎると言えばいいのか、のび太がそういう風に開けた場合は源家の風呂場に出ることが多く、入浴中の静香を怒らせている。ドラえもんが開けていきなり宇宙空間に出てしまい、野比家の気圧変化に伴い暴風が吹き荒れたこともあった。移動できる限度は10光年以内とも、宇宙の果てまで行けるともされていて、はっきり設定されていない
-      .individual_item_container__box
-        .individual_item_container__box__like_button
-          %i.far.fa-heart いいね！
-        .individual_item_container__box__report_button
-          %i.far.fa-flag  不適切な商品の報告
-        .individual_item_container__box__message
-          %i.fas.fa-lock あんしん・あんぜんへの取り組み
+  = render partial: 'individual'
 
   .comment-container
     .comment-container__box
@@ -90,65 +39,35 @@
     %i.fab.fa-pinterest-square
 
   .user_others__items
-    USERその他の出品
+    #{@item.user.profile.name}さんのその他の出品
   .new_pickup__category__individual_new
-    .new_pickup__category__new__contents_box
-      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-      .item_box_body
-        .item_box_body__name
-          ズボン
-        .item_box_body__num
-          .item_box_body__num__price ¥11,111
-          .item_box_body__num__tax (税込)
-          %i.far.fa-heart 4
-    .new_pickup__category__new__contents_box
-      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-      .item_box_body
-        .item_box_body__name
-          ズボン
-        .item_box_body__num
-          .item_box_body__num__price ¥11,111
-          .item_box_body__num__tax (税込)
-          %i.far.fa-heart 4
-    .new_pickup__category__new__contents_box
-      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-      .item_box_body
-        .item_box_body__name
-          ズボン
-        .item_box_body__num
-          .item_box_body__num__price ¥11,111
-          .item_box_body__num__tax (税込)
-          %i.far.fa-heart 4
+    - @others.each do |other|
+      = link_to item_path(other.id), class: "new_pickup__category__new__contents_box" do
+        .sold
+        = other.status
+        = image_tag other.image.url, class: "showImg" if @item.image.present?
+        .item_box_body
+          .item_box_body__name
+            = other.name
+          .item_box_body__num
+            .item_box_body__num__price ¥ #{ other.price.to_s(:delimited) }
+            .item_box_body__num__tax (税込)
+            %i.far.fa-heart 4
+
 
   .user_others__items
-    カテゴリーのその他の商品
+    #{@item.category_id}のその他の商品
   .new_pickup__category__individual_new
-    .new_pickup__category__new__contents_box
-      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-      .item_box_body
-        .item_box_body__name
-          ズボン
-        .item_box_body__num
-          .item_box_body__num__price ¥11,111
-          .item_box_body__num__tax (税込)
-          %i.far.fa-heart 4
-    .new_pickup__category__new__contents_box
-      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-      .item_box_body
-        .item_box_body__name
-          ズボン
-        .item_box_body__num
-          .item_box_body__num__price ¥11,111
-          .item_box_body__num__tax (税込)
-          %i.far.fa-heart 4
-    .new_pickup__category__new__contents_box
-      = image_tag "top_image/m42018897171_1.jpg", :size => "213x213"
-      .item_box_body
-        .item_box_body__name
-          ズボン
-        .item_box_body__num
-          .item_box_body__num__price ¥11,111
-          .item_box_body__num__tax (税込)
-          %i.far.fa-heart 4
-
+    - @others.each do |other|
+      =link_to  item_path(other.id), class: "new_pickup__category__new__contents_box" do
+        .sold
+        = other.status
+        = image_tag other.image.url, class: "showImg" if @item.image.present?
+        .item_box_body
+          .item_box_body__name
+            = other.name
+          .item_box_body__num
+            .item_box_body__num__price ¥ #{ other.price.to_s(:delimited) }
+            .item_box_body__num__tax (税込)
+            %i.far.fa-heart 4
 = render 'footer'
