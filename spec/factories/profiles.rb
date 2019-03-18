@@ -10,5 +10,4 @@ FactoryBot.define do
     block                 Faker::Address.street_name
     user
   end
-
 end

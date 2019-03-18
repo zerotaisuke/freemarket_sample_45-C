@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_target_item, only: %i[show edit update destroy]
 
   def index
+  	@items = Item.all.order('id ASC').limit(4)
   end
 
   def show
