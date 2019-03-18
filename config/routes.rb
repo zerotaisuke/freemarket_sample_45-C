@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :profiles, only: [:index, :show, :edit, :new] do
     collection do
       get 'logout'
-      get 'credit1'
+      get 'registration_creditcard'
       get 'credit2'
   end
 end
