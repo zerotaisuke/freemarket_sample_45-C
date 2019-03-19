@@ -9,6 +9,7 @@
   &__message{
     text-align: center;
     font-size: 28px;
+    font-weight: bold;
   }
 }
 // カテゴリータイトル
@@ -53,12 +54,13 @@
 .new_pickup__category__new{
   @include height_width(442px,950px);
   margin: 0 auto;
-  @include flex();
+  @include flex_start();
 
   &__contents_box{
     background-color: $white;
     @include height_width(330px,213px);
     margin-top: 25px;
+    margin-right: 20px;
    }
 }
 
@@ -80,12 +82,13 @@
       color:$black;
       @include height_width(30px,165.23px);
       position:absolute;
-      bottom:10px;
+      bottom:20px;
 
       &__price{
-        font-size: 8px;
+        font-size: 16px;
         color:$black;
         @include height_width(20px,60.81px);
+        // margin-bottom: 10px;
     }
         .item_box_body__num__tax{
           color:$black;
