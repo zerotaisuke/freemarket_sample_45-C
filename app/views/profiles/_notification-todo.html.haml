@@ -1,9 +1,11 @@
 .notificationTodo
   %ul.notificationTodo__mypageTabs
-    %li.info
-      = link_to "お知らせ", class: "info"
-    %li.todo
-      = link_to "やることリスト", class: "todo"
+    = link_to do
+      %li.info
+        お知らせ
+    = link_to do
+      %li.todo
+        やることリスト
   .notificationTodo__tabContent
     %ul.notificationTodo__tabContent__notification
     %ul.notificationTodo__tabContent__todo
