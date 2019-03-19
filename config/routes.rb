@@ -14,12 +14,12 @@ Rails.application.routes.draw do
       get 'credit2'
   end
 end
-  
+
   namespace :admin do
     resources :users, only: [:index,:show]
   end
 
-  resources :registrations,only:[:index,:new]
+  resources :registrations,only: :new
 
   resources :categories,only: :index
 
