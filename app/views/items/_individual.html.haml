@@ -3,7 +3,7 @@
     = @item.name
   .individual_item_container__item_flex
     .individual_item_container__item_image
-      = image_tag @item.image.url, class: "showImg" if @item.image.present?
+      = image_tag @item.image, class: "showImg" if @item.image.present?
       .sold
         = @item.status
     %table

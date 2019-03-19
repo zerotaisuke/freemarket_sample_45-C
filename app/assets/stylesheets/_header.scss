@@ -56,11 +56,15 @@ input.mercari-header{
 .search_btn{
 visibility:hidden;
 }
-p.left{
+.left{
   width: 150px;
+  color:#000000;
+  text-decoration: none;
 }
-p.right{
+.right{
+  color:#000000;
   width: 99px;
+  text-decoration: none;
 }
 
 // ヘッダーの下の部分

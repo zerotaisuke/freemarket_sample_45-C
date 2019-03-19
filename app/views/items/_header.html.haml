@@ -6,13 +6,14 @@
 
   .header__navi
     .header__navi__left
-      %p.left カテゴリーから探す
+      / %p.left カテゴリーから探す
+      = link_to "カテゴリーから探す", categories_path, class: 'left'
       %p.left ブランドから探す
     .header__navi__right
       = image_tag "top_image/member_photo_noimage_thumb.png", class: 'mypage_logo'
-      %p.right マイページ
+      / %p.right マイページ
+      = link_to "マイページ", profiles_path, class: 'right'
       %i.far.fa-bell
       %p.right お知らせ
       %i.fas.fa-check
       %p.right やることリスト
-

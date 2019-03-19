@@ -12,7 +12,8 @@
       .new_pickup__category__new
         - @items.each do |item|
           .new_pickup__category__new__contents_box
-            = image_tag item.image, :size => "213x213"
+            = link_to item_path(item), method: :get do
+              = image_tag item.image, :size => "213x213"
             .item_box_body
               .item_box_body__name
                 = item.name
