@@ -1,3 +1,5 @@
+@import "./variable";
+
 @mixin height_width($height,$width){
   height: $height;
   width:  $width;
@@ -25,8 +27,8 @@
 header{
   @include height_width(100px,100vw);
   @include padding_side(200px,200px);
-  background-color: #FFFFFF;
   position:relative;
+  background-color:#FFFFFF;
 
   &__mercari {
     @include height_width(148px,100px);
@@ -36,28 +38,26 @@ header{
       margin-top:5px;
   }
 }
-input{
-    height: 36px;
-    background: #fafafa;
-    transition: all ease-out .3s;
+input.mercari-header{
+    height: 40px;
     width: calc(100%);
     float:right;
-    border-radius: 4px;
     margin-top: 10px;
-}
+    border-radius: 5px;
+   border-style: none;
+   border:solid 1px #ccc;
+ }
 .search{
     height: 36px;
-    background: #fafafa;
-    transition: all ease-out .3s;
     width: calc(100% - 150px);
     float:right;
-    border-radius: 4px;
+    border-radius: 5px;
   }
 .search_btn{
 visibility:hidden;
 }
 p.left{
-  width: 180px;
+  width: 150px;
 }
 p.right{
   width: 99px;
@@ -73,14 +73,17 @@ p.right{
 
   &__left{
     @include flex();
-     width: 300px;
+     width: 100%;
      white-space: nowrap;
+     display:flex;
+      flex-direction:row;
+      justify-content: flex-start;
   }
     &__right{
       display:flex;
       flex-direction:row;
       justify-content: flex-end;
-      width: 100%;
+      width: 800px;
 
       }
     }
