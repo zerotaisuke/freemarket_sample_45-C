@@ -34,7 +34,7 @@
           .item-box-header
             %span.item-box-header__small-title カテゴリー
             %span.item-box-header__must-icon 必須
-          = f.select :category_id, ["---", "レディース", "メンズ", "ベビー・キッズ"], {}, {class: "item-detail__category select-field"}
+          = f.select :category_id, [ 1, 2, 3, 4], {}, {class: "item-detail__category select-field"}
           .item-box-header__next
             %span.item-box-header__small-title 商品の状態
             %span.item-box-header__must-icon 必須

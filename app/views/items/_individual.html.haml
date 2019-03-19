@@ -3,9 +3,8 @@
     = @item.name
   .individual_item_container__item_flex
     .individual_item_container__item_image
-      = image_tag @item.image.url, class: "showImg" if @item.image.present?
+      = image_tag @item.avatar, class: "showImg", size: "270x270"
       .sold
-        = @item.status
     %table
       %tr.exhibitor
         %th.exhibitor 出品者
@@ -29,7 +28,6 @@
       %tr.show
         %th.show 商品の状態
         %td.show
-          = @item.item_status
       %tr.show
         %th.show 配送料負担
         %td.show
@@ -50,10 +48,8 @@
   .individual_item_container__item_burden
     = @item.delivery_charge_burden
 
-  - if @item.status == "sold"
-    .individual_item_container__item_sold 売り切れてしまいました
-  - elsif current_user != @item.user
-    %button.individual_item_container__item_button 購入画面に進む
+  .individual_item_container__item_sold 売り切れてしまいました
+  %button.individual_item_container__item_button 購入画面に進む
   .individual_item_container__item_description
     %p #{ @item.description }
     .individual_item_container__box
@@ -63,9 +59,10 @@
         %i.far.fa-flag  不適切な商品の報告
       .individual_item_container__box__message
         %i.fas.fa-lock あんしん・あんぜんへの取り組み
-  - if current_user == @item.user && @item.status == "sale"
+  - if current_user == @item.user
     .itemShow-container
-      %button 編集する
+      = link_to edit_item_path do
+        .edit 編集する
       .textCenter or
       %button 一時停止
       %button 削除する
