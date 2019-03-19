@@ -25,12 +25,19 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    item = Item.find(params[:id])
-    item.update(item_params) if item.user_id == current_user.id
+    unless @item.user_id == current_user.id
+      redirect_to items_path, notice: "出品者でないため編集できません"
+    else
+      if @item.update(item_params)
+        redirect_to action: "show", notice: "「#{@item.name}」を編集しました"
+      else
+        render :show
+      end
+    end
+
   end
 
   def destroy
