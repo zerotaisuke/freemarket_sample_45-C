@@ -3,13 +3,13 @@
 .main-content
 .l-container.clearfix
   .l-content
-    .l-chapter
-      %section.l-chapter__container1
-        .l-chapter__inner
-          %section
-            .l-chapter__content
-              .l-chapter__logout
-                .l-chapter__logout-text
-                =link_to'ログアウト','/'
+    / .l-chapter
+    /   %section.l-chapter__container1
+    .l-chapter__inner
+      / %section
+      .l-chapter__content
+        .button.l-chapter__logout
+          .l-chapter__logout-text
+            =link_to'ログアウト','/',{:class => 'l-chapter__logout-text--button'}
   = render partial: "l-side"
 = render partial: "items/footer"
