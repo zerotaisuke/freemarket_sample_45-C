@@ -1,8 +1,8 @@
 %header
   .header__mercari
     = image_tag "top_image/logo.svg", class: 'mercari_logo'
-    / = form_tag('/items/search', method: :get, class: 'search', name: 'form') do
-    /   %input.mercari-header{:name => "keyword", :placeholder => "キーワードから探す", :type => "text", :value => ""}/
+    = form_tag('/items/search', method: :get, class: 'search', name: 'form') do
+      %input.mercari-header{:name => "keyword", :placeholder => "キーワードから探す", :type => "text", :value => ""}/
 
   .header__navi
     .header__navi__left
