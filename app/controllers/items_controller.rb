@@ -28,7 +28,8 @@ class ItemsController < ApplicationController
   end
 
   def update
-    unless @item.user_id == current_user.id
+
+    unless current_user.items.find(params[:id])
       redirect_to items_path, notice: "出品者でないため編集できません"
     else
       if @item.update(item_params)
