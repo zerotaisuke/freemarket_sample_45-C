@@ -1,7 +1,10 @@
 .default-container
   = render 'header'
-.top_banner
-= image_tag "top_image/1.jpg", id: 'main_image', class: 'top_banner__main_image'
+.top_banner#slide-top-banner
+  .slider-wrapper
+    = image_tag "top_image/1.jpg",class: 'top_banner__main_image'
+    = image_tag "top_image/2.jpg",class: 'top_banner__main_image'
+    = image_tag "top_image/3.jpg",class: 'top_banner__main_image'
 
 .pickup_container
   %h3.pickup_container__message
