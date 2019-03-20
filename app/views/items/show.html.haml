@@ -45,7 +45,7 @@
       = link_to item_path(other.id), class: "new_pickup__category__new__contents_box" do
         .sold
         = other.status
-        = image_tag other.image, class: "showImg" if @item.image.present?
+        = image_tag other.avatar, class: "showImg"
         .item_box_body
           .item_box_body__name
             = other.name
@@ -62,7 +62,7 @@
       =link_to  item_path(other.id), class: "new_pickup__category__new__contents_box" do
         .sold
         = other.status
-        = image_tag other.image, class: "showImg" if @item.image.present?
+        = image_tag other.avatar, class: "showImg"
         .item_box_body
           .item_box_body__name
             = other.name
