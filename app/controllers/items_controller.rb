@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-  	 @items = Item.where('title LIKE(?)', "%#{params[:keyword]}%").limit(1)
+  	 @items = Item.where('name LIKE(?)', "%#{params[:keyword]}%").limit(40)
   end
 
   def create

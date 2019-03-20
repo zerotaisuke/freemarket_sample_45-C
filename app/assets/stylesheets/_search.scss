@@ -1,0 +1,163 @@
+.search-contents-wrapper{
+  background-color: $thin-gray;
+  height:1300px;
+}
+
+.search_side_bar{
+  @include height_width(1200px,280px);
+  float:left;
+  padding: 10px;
+  margin-left:200px;
+  margin-top: 30px;
+}
+select.side-bar_order__select{
+  @include height_width(36px,100%);
+  background-color: #FFFFFF;
+  position: relative;
+   @include pull_down();
+    background-color: #FFFFFF
+}
+
+
+
+input.search_side_bar__input-keyword{
+  @include height_width(36px,100%);
+  border: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    margin-top: 10px;
+    border-radius:5px;
+}
+
+ .search_result_container{
+  height: 100%;
+  width: calc(100% - 280px);
+  padding-top: 30px;
+ }
+.search_result_container__row{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   @include height_width(100%,800px);
+}
+select.side-bar_order__category{
+  @include height_width(36px,100%);
+  position: relative;
+    @include pull_down();
+}
+.search_side_bar__select-category{
+  margin-top: 75px;
+}
+.search_side_bar__brand{
+  margin-top: 25px;
+}
+.search_side_bar__size{
+  margin-top: 75px;
+}
+.search_side_bar__price{
+  margin-top: 25px;
+}
+// .item_state{
+
+// }
+select.side-bar_order__size{
+   @include height_width(36px,100%);
+   position: relative;
+    @include pull_down();
+}
+select.side-bar_order__price{
+  @include height_width(36px,100%);
+  position: relative;
+    z-index: 2;
+    @include pull_down();
+}
+article.section{
+  @include height_width(100%,700px);
+  margin: 0 0 0 500px;
+}
+.search_side_bar__detail{
+  background-color:$white;
+  padding:10px;
+}
+
+.search_side_bar__check-container{
+  width: 280px;
+  margin-top: 10px;
+  word-wrap: break-word;
+  display:flex;
+  -webkit-box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+}
+.search-side_bar__button{
+ display:flex;
+  -webkit-box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+}
+.search-side_bar__button__clear{
+@include height_width(50px,111px);
+  background-color: #aaa;
+    border: 1px solid #aaa;
+    color: #fff;
+   text-align: center;
+   padding-top: 12px;
+}
+.search-side_bar__button__completion{
+@include height_width(50px,111px);
+  background-color: #ea352d;;
+    border: 1px solid #ea352d;;
+    color: #fff;
+    text-align: center;
+   padding-top: 12px;
+}
+.search-new_pickup__category__new__contents_box{
+  background-color:$white;
+  @include height_width(270px,160px);
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.search__item_box_body{
+  @include height_width(110px,160px);
+  margin-left:10px;
+  margin-right:10px;
+  position:relative;
+
+  &__name{
+    font-weight: lighter;
+    color:$black;
+    @include height_width(48px,128px);
+    padding-top:10px;
+    box-sizing: border-box;
+  }
+    &__num{
+      color:$black;
+      @include height_width(28px,81px);
+      position:absolute;
+      bottom:10px;
+
+      &__price{
+        font-size: 15px;
+        color:$black;
+        @include height_width(10px,60.81px);
+    }
+        &__tax{
+          color:$black;
+          @include height_width(12px,165.23px);
+          font-size: 10px;
+          margin-top: 4px;
+          position:relative;
+      }
+          i.far.fa-heart{
+            position:absolute;
+            color:#CCCCCC ;
+            bottom:10px;
+            right:-10px;
+     }
+  }
+}
+
+
+.check_box{
+  height:100px;
+} 
