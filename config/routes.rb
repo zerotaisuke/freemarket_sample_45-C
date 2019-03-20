@@ -20,7 +20,7 @@ end
     resources :users, only: [:index,:show]
   end
 
-  resources :registrations,only:[:index,:new]
+  resources :registrations,only: :new
 
   resources :categories,only: :index
 
