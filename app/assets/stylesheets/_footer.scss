@@ -1,9 +1,16 @@
 @import "./variable";
 /*フッタートップ画像ついている方*/
+footer{
+  clear:both;
+}
 .footer__top_banner{
-	background: url(top_image/designer__s_room__by_k3nzus.png);
-  @include height_width(260px,100vw);
+  background-image: url(top_image/0.34.22.png);
   position:relative;
+  background-size:contain;
+  background-size:100% 100%;
+  background-repeat : no-repeat;
+  height:300px;
+  width: 100%;
 
   &__mobile{
     position:absolute;
