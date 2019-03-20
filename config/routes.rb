@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :items do
     resources :trades, only: [:new, :create]
   end
+  resources :items, only: %i(index show new)
   root 'items#index'
   devise_for :users, controllers: { registrations: 'users/registrations',
                                     omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -19,7 +20,7 @@ end
     resources :users, only: [:index,:show]
   end
 
-  resources :registrations,only:[:index,:new]
+  resources :registrations,only: :new
 
   resources :categories,only: :index
 
