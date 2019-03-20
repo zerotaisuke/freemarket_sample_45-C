@@ -1,3 +1,5 @@
+@import "./variable";
+
 @mixin height_width($height,$width){
   height: $height;
   width:  $width;
@@ -17,59 +19,82 @@
   flex-direction:row;
   justify-content: flex-start;
 }
+*{
+  box-sizing:border-box;
+}
 
 // ヘッダ全体とヘッダー上部
 header{
-  @include height_width(100px,100vh);
-  @include padding_side(100px,100px);
+  @include height_width(100px,100vw);
+  @include padding_side(200px,200px);
+  position:relative;
+  background-color:#FFFFFF;
 
   &__mercari {
     @include height_width(148px,100px);
     }
     .mercari_logo{
-      @include height_width(40px,148px);
-      padding-top:5px;
-
+      @include height_width(40px,130px);
+      margin-top:5px;
   }
 }
-
-li{
-  display: inline-block;
-  font-size:13px;
+input.mercari-header{
+    height: 40px;
+    width: calc(100%);
+    float:right;
+    margin-top: 10px;
+    border-radius: 5px;
+   border-style: none;
+   border:solid 1px #ccc;
+ }
+.search{
+    height: 36px;
+    width: calc(100% - 150px);
+    float:right;
+    border-radius: 5px;
+  }
+.search_btn{
+visibility:hidden;
 }
-/*検索フォーム*/
-.cp_iptxt input[type='text'] {
-  font: 15px/24px sans-serif;
-  box-sizing: border-box;
-  width:950px;
-  padding: 0.3em;
-  transition: 0.3s;
-  letter-spacing: 1px;
-  border: 1px solid #1b2538;
-  border-radius: 4px;
-  position:absolute;
-  top: 5px;
+.left{
+  width: 150px;
+  color:#000000;
+  text-decoration: none;
+}
+.right{
+  color:#000000;
+  width: 99px;
+  text-decoration: none;
 }
 
 // ヘッダーの下の部分
 .header__navi{
-  @include height_width(38px,950px);
+  @include height_width(50px,100%);
   font-size: 14px;
   padding-top: 15px;
   @include flex_start();
-  padding-left: 95px;
+  margin-bottom:20px;
 
   &__left{
     @include flex();
-     width: 300px;
-     padding-left: 50px;
+     width: 100%;
+     white-space: nowrap;
+     display:flex;
+      flex-direction:row;
+      justify-content: flex-start;
   }
     &__right{
-      @include flex();
-      width: 650px;
+      display:flex;
+      flex-direction:row;
+      justify-content: flex-end;
+      width: 800px;
+
       }
     }
-
+.mypage_logo{
+  @include height_width(25px,25px);
+  border-radius: 50%;
+}
 .top_banner__main_image{
   width: 100%;
   vertical-align: bottom;
