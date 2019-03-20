@@ -1,25 +1,27 @@
+// コンテンツ全体
 .search-contents-wrapper{
   background-color: $thin-gray;
   height:1300px;
 }
 
+// サイドバー関連
 .search_side_bar{
   @include height_width(1200px,280px);
   float:left;
   padding: 10px;
   margin-left:200px;
   margin-top: 30px;
-}
+
 select.side-bar_order__select{
   @include height_width(36px,100%);
   background-color: #FFFFFF;
   position: relative;
    @include pull_down();
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
+  }
 }
 
-
-
+// サイドバー入力欄
 input.search_side_bar__input-keyword{
   @include height_width(36px,100%);
   border: 1px solid #ccc;
@@ -28,48 +30,59 @@ input.search_side_bar__input-keyword{
     margin-top: 10px;
     border-radius:5px;
 }
-
+// 検索結果出力欄
  .search_result_container{
   height: 100%;
   width: calc(100% - 280px);
   padding-top: 30px;
- }
-.search_result_container__row{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: flex-start;
-   @include height_width(100%,800px);
-}
-select.side-bar_order__category{
-  @include height_width(36px,100%);
-  position: relative;
-    @include pull_down();
-}
+
+  &__row{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     @include height_width(100%,800px);
+   }
+  }
+
+
+// カテゴリー
 .search_side_bar__select-category{
   margin-top: 75px;
-}
+
+  select.side-bar_order__category{
+    @include height_width(36px,100%);
+    position: relative;
+      @include pull_down();
+    }
+  }
+// ブランド入力欄
 .search_side_bar__brand{
   margin-top: 25px;
 }
+// サイズ入力欄
 .search_side_bar__size{
   margin-top: 75px;
 }
+
+.check_box{
+  height:100px;
+}
+ select.side-bar_order__size{
+ @include height_width(36px,100%);
+ position: relative;
+  @include pull_down();
+}
+
+// 価格選択欄
 .search_side_bar__price{
   margin-top: 25px;
-}
-// .item_state{
 
-// }
-select.side-bar_order__size{
-   @include height_width(36px,100%);
-   position: relative;
-    @include pull_down();
-}
 select.side-bar_order__price{
   @include height_width(36px,100%);
   position: relative;
-    z-index: 2;
-    @include pull_down();
+  z-index: 2;
+  @include pull_down();
+  }
 }
 article.section{
   @include height_width(100%,700px);
@@ -80,6 +93,7 @@ article.section{
   padding:10px;
 }
 
+
 .search_side_bar__check-container{
   width: 280px;
   margin-top: 10px;
@@ -89,28 +103,35 @@ article.section{
   -ms-flex-pack:justify;
   justify-content:space-between;
 }
+
+// サイドバーボタン
 .search-side_bar__button{
  display:flex;
   -webkit-box-pack:justify;
   -ms-flex-pack:justify;
   justify-content:space-between;
-}
-.search-side_bar__button__clear{
-@include height_width(50px,111px);
-  background-color: #aaa;
-    border: 1px solid #aaa;
-    color: #fff;
-   text-align: center;
-   padding-top: 12px;
-}
-.search-side_bar__button__completion{
-@include height_width(50px,111px);
-  background-color: #ea352d;;
-    border: 1px solid #ea352d;;
-    color: #fff;
-    text-align: center;
-   padding-top: 12px;
-}
+
+  &__clear{
+  @include height_width(50px,111px);
+    background-color: #aaa;
+      border: 1px solid #aaa;
+      color: #fff;
+     text-align: center;
+     padding-top: 12px;
+  }
+    &__completion{
+    @include height_width(50px,111px);
+      background-color: #ea352d;;
+        border: 1px solid #ea352d;;
+        color: #fff;
+        text-align: center;
+       padding-top: 12px;
+     }
+    }
+
+
+// アイテム個別
+
 .search-new_pickup__category__new__contents_box{
   background-color:$white;
   @include height_width(270px,160px);
@@ -156,8 +177,3 @@ article.section{
      }
   }
 }
-
-
-.check_box{
-  height:100px;
-} 
