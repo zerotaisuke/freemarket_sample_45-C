@@ -1,18 +1,13 @@
 %footer
   .footer__top_banner
     .footer__top_banner__mobile
-      = image_tag "top_image/download_content_pc.png", :size => "250x250"
 
     %p.footer__top_banner__message
-      スマホでかんたんフリマアプリ
-      %br/
-      %span 今すぐ無料ダウンロード!
     .mercari_logo_bottom
-      = image_tag "top_image/mercari_profile.png", class: 'mercari_radius'
     .apple_logo_bottom
-      = image_tag "top_image/app-store.svg", class: 'apple_logo_bottom'
+      / = image_tag "top_image/app-store.svg", class: 'apple_logo_bottom'
     .google_logo_bottom
-      = image_tag "top_image/google-play.svg"
+      / = image_tag "top_image/google-play.svg"
   .footer__bottom__banner
     .footer__bottom__banner__about_mercari
       %p 会社概要（運営会社)
@@ -56,4 +51,5 @@
 .sell_btn
   %p.sell_btn__message
     出品
-  %i.fas.fa-camera
+  =link_to new_item_path do
+    %i.fas.fa-camera

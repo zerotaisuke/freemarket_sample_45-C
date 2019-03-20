@@ -10,6 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2019_03_11_095610) do
+=======
 ActiveRecord::Schema.define(version: 2019_03_14_062857) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -32,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_062857) do
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
+>>>>>>> 955a1fa440cce0fd0dab567c4bbb6e4ddb8c60de
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -55,7 +59,14 @@ ActiveRecord::Schema.define(version: 2019_03_14_062857) do
     t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
+    t.integer "category_id"
+    t.integer "brand_id"
+    t.integer "user_id"
+    t.string "description", null: false
+=======
     t.index ["user_id"], name: "index_items_on_user_id"
+>>>>>>> 955a1fa440cce0fd0dab567c4bbb6e4ddb8c60de
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

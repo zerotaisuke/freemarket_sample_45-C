@@ -9,6 +9,7 @@
   &__message{
     text-align: center;
     font-size: 28px;
+    font-weight: bold;
   }
 }
 // カテゴリータイトル
@@ -53,18 +54,19 @@
 .new_pickup__category__new{
   @include height_width(442px,950px);
   margin: 0 auto;
-  @include flex();
+  @include flex_start();
 
   &__contents_box{
     background-color: $white;
     @include height_width(330px,213px);
     margin-top: 25px;
+    margin-right: 20px;
    }
 }
 
 // アイテム欄個別
 .item_box_body{
-  @include height_width(117px,100%);
+  @include height_width(117px,200px);
   margin-left:20px;
   margin-right:20px;
   position:relative;
@@ -80,12 +82,13 @@
       color:$black;
       @include height_width(30px,165.23px);
       position:absolute;
-      bottom:10px;
+      bottom:20px;
 
       &__price{
-        font-size: 8px;
+        font-size: 16px;
         color:$black;
         @include height_width(20px,60.81px);
+        // margin-bottom: 10px;
     }
         .item_box_body__num__tax{
           color:$black;
@@ -100,4 +103,33 @@
             right:-10px;
      }
   }
+}
+
+#slide-top-banner {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+.top_banner__main_image{
+  width: 100vw;
+  height: 390px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.slider-wrapper {
+  width: 300%;
+  position: relative;
+  left: 0;
+  will-change: transform;
+  animation: slider 8s infinite;
+  overflow: hidden;
+}
+
+@keyframes slider {
+  animation-delay: 5s;
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100vw); }
+  66% { transform: translateX(-200vw); }
+  100% { transform: translateX(-200vw); }
 }
