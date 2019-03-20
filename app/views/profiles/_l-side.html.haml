@@ -1,7 +1,7 @@
 .l-side
   .naviBar
     %ul.naviBar__naviList
-      = link_to do
+      = link_to profiles_path do
         %li.naviBar__naviList__Item
           マイページ
           %i.fas.fa-chevron-right
@@ -69,7 +69,7 @@
           %i.fas.fa-chevron-right
     %h3.naviBar__naviHead 設定
     %ul.naviBar__naviList
-      = link_to do
+      = link_to profile_path(current_user.id) do
         %li.naviBar__naviList__Item
           プロフィール
           %i.fas.fa-chevron-right
@@ -85,7 +85,7 @@
         %li.naviBar__naviList__Item
           メール/パスワード
           %i.fas.fa-chevron-right
-      = link_to do
+      = link_to edit_profile_path(current_user.id) do
         %li.naviBar__naviList__Item
           本人情報
           %i.fas.fa-chevron-right
@@ -93,7 +93,7 @@
         %li.naviBar__naviList__Item
           電話番号の確認
           %i.fas.fa-chevron-right
-      = link_to do
+      = link_to logout_profiles_path do
         %li.naviBar__naviList__Item
           ログアウト
           %i.fas.fa-chevron-right
