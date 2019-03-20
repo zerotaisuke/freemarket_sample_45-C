@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_target_item, only: %i[show edit update destroy]
-
+  before_action :set_target_item, only: %i[show destroy]
+  before_action :set_update_item, only: %i[edit update]
   def index
   	@items = Item.all.order('id ASC').limit(4)
   end
@@ -28,6 +28,11 @@ class ItemsController < ApplicationController
   end
 
   def update
+    if @item.update(item_params)
+      redirect_to action: "show", notice: "「#{@item.name}」を編集しました"
+    else
+      render :show
+    end
   end
 
   def destroy
@@ -62,5 +67,8 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def set_update_item
+    @item = current_user.items.find(params[:id])
+  end
 
 end
