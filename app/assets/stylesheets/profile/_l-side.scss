@@ -1,3 +1,4 @@
+
 .l-side {
   margin: 40px auto 0;
   .naviBar{
@@ -12,9 +13,6 @@
       color: #333;
       box-sizing: border-box;
       border-top: 1px solid #eee;
-      a {
-        text-decoration: none;
-      }
         .fa-chevron-right {
           position: absolute;
           top: 50%;
@@ -23,6 +21,9 @@
           transform: translate(0, -50%);
         }
       }
+    }
+    &__naviList a{
+      text-decoration: none;
     }
     &__naviHead {
       margin: 40px 4% 0;

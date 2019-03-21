@@ -32,6 +32,9 @@
           margin: 8px 0 0;
           font-size: 14px;
         }
+        &__userName a{
+          text-decoration: none;
+        }
         &__mypageCount {
           margin: 8px 0 0;
           font-size: 0;
@@ -58,6 +61,9 @@
           }
         }
       }
+    }
+    .mypageUserIcon a {
+      text-decoration: none;
     }
   }
 }
