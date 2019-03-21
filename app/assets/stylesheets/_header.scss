@@ -60,13 +60,21 @@ visibility:hidden;
   width: 150px;
   color:#000000;
   text-decoration: none;
+  padding-top: 5px;
 }
 .right{
   color:#000000;
   width: 150px;
   text-decoration: none;
+  padding-top: 5px;
 }
 .header__navi__button-box{
+  margin-bottom:20px;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
   margin-left: 20px;
 }
 .header__navi__Log-In{
@@ -77,6 +85,8 @@ visibility:hidden;
   text-decoration:none;
   padding-top: 5px;
   padding-left: 10px;
+  margin-right: 20px;
+  font-weight: bold;
 }
 .header__navi__sign-up{
   @include height_width(32px,78px);
@@ -88,12 +98,14 @@ visibility:hidden;
   padding-top: 5px;
   padding-left: 10px;
 }
+.underline-kill{
+  text-decoration:none;
+}
 // ヘッダーの下の部分
 .header__navi{
   @include height_width(50px,100%);
   font-size: 14px;
-  padding-top: 15px;
- 
+  padding-top: 5px;
   margin-bottom:20px;
   display:-ms-flexbox;
   display:flex;
@@ -114,8 +126,7 @@ visibility:hidden;
       flex-direction:row;
       justify-content: flex-end;
       white-space: nowrap;
-      // width: 0px;
-
+       margin-bottom: 5px;
       }
     }
 .mypage_logo{
@@ -126,3 +137,9 @@ visibility:hidden;
   width: 100%;
   vertical-align: bottom;
 }
+i.far.fa-bell{
+  margin-top: 5px;
+}
+ i.fas.fa-check{
+  margin-top: 5px;
+ }

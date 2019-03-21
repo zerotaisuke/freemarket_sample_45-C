@@ -19,10 +19,10 @@
       %p.right やることリスト
     -else
       .header__navi__button-box
-      = link_to user_session_path do
+      = link_to user_session_path, class: 'underline-kill' do
         .header__navi__Log-In
           ログイン
-      = link_to new_user_registration_path do
+      = link_to new_user_registration_path, class: 'underline-kill' do
         .header__navi__sign-up
           新規登録
 
