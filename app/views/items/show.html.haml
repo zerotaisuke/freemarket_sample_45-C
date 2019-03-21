@@ -43,9 +43,8 @@
   .new_pickup__category__individual_new
     - @others.each do |other|
       = link_to item_path(other.id), class: "new_pickup__category__new__contents_box" do
-        .sold
-        = other.status
-        = image_tag other.avatar, class: "showImg"
+        .contents_image_box
+          = image_tag other.avatar, class: "subShowImg"
         .item_box_body
           .item_box_body__name
             = other.name
@@ -60,9 +59,8 @@
   .new_pickup__category__individual_new
     - @others.each do |other|
       =link_to  item_path(other.id), class: "new_pickup__category__new__contents_box" do
-        .sold
-        = other.status
-        = image_tag other.avatar, class: "showImg"
+        .contents_image_box
+          = image_tag other.avatar, class: "subShowImg"
         .item_box_body
           .item_box_body__name
             = other.name

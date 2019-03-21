@@ -23,18 +23,13 @@
         %td.show
           = @item.brand_id
       %tr.show
-        %th.show 商品のサイズ
-        %td.show 一般的なドアの大きさ
-      %tr.show
         %th.show 商品の状態
         %td.show
+          = @item.status
       %tr.show
         %th.show 配送料負担
         %td.show
           = @item.delivery_charge_burden
-      %tr.show
-        %th.show 配送方法
-        %td.show Time Machine
       %tr.ligion
         %th.ligion 配送地域
         %td.ligion
@@ -49,7 +44,8 @@
     = @item.delivery_charge_burden
 
   .individual_item_container__item_sold 売り切れてしまいました
-  %button.individual_item_container__item_button 購入画面に進む
+  = link_to new_item_trade_path(@item.id) do
+    .individual_item_container__item_button 購入画面に進む
   .individual_item_container__item_description
     %p #{ @item.description }
     .individual_item_container__box
@@ -62,7 +58,6 @@
   - if current_user == @item.user
     .itemShow-container
       = link_to edit_item_path do
-        .edit 編集する
-      .textCenter or
-      %button 一時停止
-
+        .individual_item_container__item_button 編集する
+      = link_to item_path, method: :delete, data: { confirm: '削除しますか？' } do
+        .individual_item_container__item_button 削除する

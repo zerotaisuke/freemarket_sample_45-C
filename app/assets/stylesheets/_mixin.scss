@@ -18,3 +18,15 @@
   flex-direction:row;
   justify-content: flex-start;
 }
+@mixin pull_down(){
+   height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    margin-bottom:30px;
+
+}
