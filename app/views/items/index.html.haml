@@ -15,16 +15,17 @@
       .new_pickup__category__new
         - @items.each do |item|
           .new_pickup__category__new__contents_box
-            = link_to item_path(item), method: :get do
-              = image_tag item.avatar, :size => "213x213"
-            .item_box_body
-              .item_box_body__name
-                = item.name
-              .item_box_body__num
-                .item_box_body__num__price
-                  = item.price
-                .item_box_body__num__tax (税込)
-                %i.far.fa-heart 4
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
 
 
   .new_pickup__category
@@ -33,16 +34,17 @@
       .new_pickup__category__new
         - @items.each do |item|
           .new_pickup__category__new__contents_box
-            = link_to item_path(item), method: :get do
-              = image_tag item.avatar, :size => "213x213"
-            .item_box_body
-              .item_box_body__name
-                = item.name
-              .item_box_body__num
-                .item_box_body__num__price
-                  = item.price
-                .item_box_body__num__tax (税込)
-                %i.far.fa-heart 4
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
 
   .new_pickup__category
     %p.new_pickup__category__ladies_new__message
@@ -50,101 +52,109 @@
       .new_pickup__category__new
         - @items.each do |item|
           .new_pickup__category__new__contents_box
-            = link_to item_path(item), method: :get do
-              = image_tag item.avatar, :size => "213x213"
-            .item_box_body
-              .item_box_body__name
-                = item.name
-              .item_box_body__num
-                .item_box_body__num__price
-                  = item.price
-                .item_box_body__num__tax (税込)
-                %i.far.fa-heart 4
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
+
   .new_pickup__category
     %p.new_pickup__category__ladies_new__message
       コスメ・香水・美容新着アイテム
       .new_pickup__category__new
         - @items.each do |item|
           .new_pickup__category__new__contents_box
-            = link_to item_path(item), method: :get do
-              = image_tag item.avatar, :size => "213x213"
-            .item_box_body
-              .item_box_body__name
-                = item.name
-              .item_box_body__num
-                .item_box_body__num__price
-                  = item.price
-                .item_box_body__num__tax (税込)
-                %i.far.fa-heart 4
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
+
 .pickup_container
   %h3.pickup_container__message
     ピックアップブランド
   .new_pickup__category
     %p.new_pickup__category__ladies_new__message
       シャネル新着アイテム
-    .new_pickup__category__new
-      - @items.each do |item|
-        .new_pickup__category__new__contents_box
-          = link_to item_path(item), method: :get do
-            = image_tag item.avatar, :size => "213x213"
-          .item_box_body
-            .item_box_body__name
-              = item.name
-            .item_box_body__num
-              .item_box_body__num__price
-                = item.price
-              .item_box_body__num__tax (税込)
-              %i.far.fa-heart 4
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
 
   .new_pickup__category
     %p.new_pickup__category__ladies_new__message
       ルイ・ヴィトン新着アイテム
-    .new_pickup__category__new
-      - @items.each do |item|
-        .new_pickup__category__new__contents_box
-          = link_to item_path(item), method: :get do
-            = image_tag item.avatar, :size => "213x213"
-          .item_box_body
-            .item_box_body__name
-              = item.name
-            .item_box_body__num
-              .item_box_body__num__price
-                = item.price
-              .item_box_body__num__tax (税込)
-              %i.far.fa-heart 4
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
 
   .new_pickup__category
     %p.new_pickup__category__ladies_new__message
       シュプリーム新着アイテム
-    .new_pickup__category__new
-      - @items.each do |item|
-        .new_pickup__category__new__contents_box
-          = link_to item_path(item), method: :get do
-            = image_tag item.avatar, :size => "213x213"
-          .item_box_body
-            .item_box_body__name
-              = item.name
-            .item_box_body__num
-              .item_box_body__num__price
-                = item.price
-              .item_box_body__num__tax (税込)
-              %i.far.fa-heart 4
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
 
   .new_pickup__category
     %p.new_pickup__category__ladies_new__message
       ナイキ新着アイテム
-    .new_pickup__category__new
-      - @items.each do |item|
-        .new_pickup__category__new__contents_box
-          = link_to item_path(item), method: :get do
-            = image_tag item.avatar, :size => "213x213"
-          .item_box_body
-            .item_box_body__name
-              = item.name
-            .item_box_body__num
-              .item_box_body__num__price
-                = item.price
-              .item_box_body__num__tax (税込)
-              %i.far.fa-heart 4
+      .new_pickup__category__new
+        - @items.each do |item|
+          .new_pickup__category__new__contents_box
+            .new_pickup__category__new-image
+              = link_to item_path(item), method: :get do
+                = image_tag item.avatar, :class => "thumnail-box"
+              .item_box_body
+                .item_box_body__name
+                  = item.name
+                .item_box_body__num
+                  .item_box_body__num__price
+                    = item.price
+                  .item_box_body__num__tax (税込)
+                  %i.far.fa-heart 4
 
 = render 'footer'
