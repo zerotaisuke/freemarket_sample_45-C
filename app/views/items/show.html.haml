@@ -46,12 +46,12 @@
       = link_to item_path(other.id), class: "new_pickup__category__new__contents_box" do
         .contents_image_box
           = image_tag other.avatar, class: "subShowImg"
-        .item_box_body
-          .item_box_body__name
+        .itemBoxBody
+          .itemBoxBody__name
             = other.name
-          .item_box_body__num
-            .item_box_body__num__price ¥ #{ other.price.to_s(:delimited) }
-            .item_box_body__num__tax (税込)
+          .itemBoxBody__num
+            .itemBoxBody__num__price ¥ #{ other.price.to_s(:delimited) }
+            .itemBoxBody__num__tax (税込)
             %i.far.fa-heart 4
 
 
@@ -62,12 +62,12 @@
       =link_to  item_path(other.id), class: "new_pickup__category__new__contents_box" do
         .contents_image_box
           = image_tag other.avatar, class: "subShowImg"
-        .item_box_body
-          .item_box_body__name
+        .itemBoxBody
+          .itemBoxBody__name
             = other.name
-          .item_box_body__num
-            .item_box_body__num__price ¥ #{ other.price.to_s(:delimited) }
-            .item_box_body__num__tax (税込)
+          .itemBoxBody__num
+            .itemBoxBody__num__price ¥ #{ other.price.to_s(:delimited) }
+            .itemBoxBody__num__tax (税込)
             %i.far.fa-heart 4
 
 = render 'footer'

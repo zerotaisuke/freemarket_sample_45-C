@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to action: "show", notice: "「#{@item.name}」を編集しました"
     else
-      render :show
+      render :edit
     end
   end
 
