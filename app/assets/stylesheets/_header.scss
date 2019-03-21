@@ -63,17 +63,43 @@ visibility:hidden;
 }
 .right{
   color:#000000;
-  width: 99px;
+  width: 150px;
   text-decoration: none;
 }
-
+.header__navi__button-box{
+  margin-left: 20px;
+}
+.header__navi__Log-In{
+  @include height_width(32px,78px);
+  background-color: $red;
+  color:$white;
+  border-radius: 3px;
+  text-decoration:none;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.header__navi__sign-up{
+  @include height_width(32px,78px);
+  background-color: $white;
+  color:$light_blue;
+  border-radius: 3px;
+  border: solid 1px $light_blue;
+  text-decoration:none;
+  padding-top: 5px;
+  padding-left: 10px;
+}
 // ヘッダーの下の部分
 .header__navi{
   @include height_width(50px,100%);
   font-size: 14px;
   padding-top: 15px;
-  @include flex_start();
+ 
   margin-bottom:20px;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
 
   &__left{
     @include flex();
@@ -87,7 +113,8 @@ visibility:hidden;
       display:flex;
       flex-direction:row;
       justify-content: flex-end;
-      width: 800px;
+      white-space: nowrap;
+      // width: 0px;
 
       }
     }
