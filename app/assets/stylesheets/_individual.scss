@@ -343,3 +343,28 @@ p.comment{
     }
   }
 }
+.soldOut{
+  background-color: gray;
+}
+.redTryangle{
+    border-width: 100px 100px 0 0;
+    border-color: #ea352d transparent transparent transparent;
+        display: block;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+    .textSold{
+    position: absolute;
+    z-index: 30;
+    left: 0;
+    bottom: 45px;
+    float: none;
+    color: white;
+    font-size: 25px;
+    -webkit-transform: rotate(-44deg);
+    font-weight: 600;
+    }
