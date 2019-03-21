@@ -44,6 +44,9 @@
     - @others.each do |other|
       = link_to item_path(other.id), class: "new_pickup__category__new__contents_box" do
         .contents_image_box
+          - if other.trade.present?
+            .redTryangle
+              .textSold sold
           = image_tag other.avatar, class: "subShowImg"
         .itemBoxBody
           .itemBoxBody__name
@@ -60,6 +63,9 @@
     - @others.each do |other|
       =link_to  item_path(other.id), class: "new_pickup__category__new__contents_box" do
         .contents_image_box
+          - if other.trade.present?
+            .redTryangle
+              .textSold sold
           = image_tag other.avatar, class: "subShowImg"
         .itemBoxBody
           .itemBoxBody__name
