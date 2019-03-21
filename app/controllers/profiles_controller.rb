@@ -12,9 +12,11 @@ class ProfilesController < ApplicationController
   end
 
   def logout
+    @crumb_name = "ログアウト"
   end
 
   def registration_creditcard
+    @crumb_name = "クレジットカード登録"
   end
 
   def credit2

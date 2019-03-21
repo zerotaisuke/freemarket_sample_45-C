@@ -1,5 +1,21 @@
 .main-content
   = render "items/header"
+  = render "items/breadcrumbs-profile"
+  / profiles
+  / - breadcrumb :profiles
+  / = breadcrumbs separator: " &rsaquo; "
+
+  / categories
+  / - breadcrumb :categories
+  / = breadcrumbs separator: " &rsaquo; ", class: 'a', current_class: 'b'
+
+  / profile
+  / - breadcrumb :profile, @crumb_name
+  / = breadcrumbs separator: " &rsaquo; "
+
+  / categorie
+  / - breadcrumb :categorie, @categorie
+  / = breadcrumbs separator: " &rsaquo; "
 
   .l-container.clearfix
     .l-content
