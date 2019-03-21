@@ -62,6 +62,16 @@
     margin-left: 180px;
     margin-bottom: 30px;
     background-color:#ea352d;
+
+    &-link{
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    width: 320px;
+    color: #fff;
+    background-color:#ea352d;
+    text-decoration:none;
+    }
   }
 
 //ポイントと配送料について
