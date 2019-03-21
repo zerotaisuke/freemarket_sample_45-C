@@ -10,10 +10,19 @@
       = link_to "カテゴリーから探す", categories_path, class: 'left'
       %p.left ブランドから探す
     .header__navi__right
+    -if user_signed_in?
       = image_tag "top_image/member_photo_noimage_thumb.png", class: 'mypage_logo'
-
       = link_to "マイページ", profiles_path, class: 'right'
       %i.far.fa-bell
       %p.right お知らせ
       %i.fas.fa-check
       %p.right やることリスト
+    -else
+      .header__navi__button-box
+      = link_to user_session_path, class: 'underline-kill' do
+        .header__navi__Log-In
+          ログイン
+      = link_to new_user_registration_path, class: 'underline-kill' do
+        .header__navi__sign-up
+          新規登録
+

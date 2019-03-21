@@ -1,10 +1,9 @@
 .main-content
-  = render partial: "items/header"
-  .l-container.clearfix
-    .l-content
-      .l-chapter__inner
-        .l-chapter__content
-          .button.l-chapter__logout
-            =link_to'ログアウト','/',{:class => 'l-chapter__logout-text--button'}
-    = render partial: "l-side"
+.l-container.clearfix
+  .l-content
+    .l-chapter__inner
+      .l-chapter__content
+        .button.l-chapter__logout
+          = link_to'ログアウト',destroy_user_session_path, method: :delete,class:"l-chapter__logout-text--button"
+  = render partial: "l-side"
 = render partial: "items/footer"
