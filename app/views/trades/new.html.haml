@@ -1,0 +1,50 @@
+.main-content
+  = render "/registrations/registration-header"
+
+  .confirmation
+    .confirmation__header
+      購入を確定しますか？
+    .confirmation__container
+      = image_tag @item.avatar, class: "showImg", size: "270x270"
+      .confirmation__item-title
+        = @item.name
+    .confirmation__container__buy-price
+      .confirmation__pay
+        ¥ #{ @item.price.to_s(:delimited) }
+      .confirmation__post-margin
+        送料込み
+    .confirmation__point
+      ポイントはありません
+    .confirmation__container__buy-price-cell
+      .confirmation__pay__title
+        支払い金額
+      .confirmation__pay
+        ¥ #{ @item.price.to_s(:delimited) }
+      .confirmation__btn
+        = link_to "購入する", item_trades_path, method: :post,class: "confirmation__btn-link"
+
+    .confirmation__delivery
+      .confirmation__delivery__spot
+        配送先
+      .confirmation__delivery__post
+        = current_user.profile.postal_code
+      .confirmation__delivery__adress
+        = "#{current_user.profile.prefecture}" + "#{current_user.profile.municipality}" + "#{current_user.profile.block}"
+      .confirmation__delivery__name
+        = current_user.profile.name
+      .confirmation__change{hover: "$('#confirmation__change').hover();"}
+        = link_to "変更する","", class: "confirmation__change", id: "confirmation__change"
+
+    .confirmation__payment-method
+      .confirmation__payment-method__spot
+        支払方法
+      .confirmation__payment-method__card-number
+        *********5355
+      .confirmation__payment-method__expiration_date
+        03/23
+      .confirmation__payment-method__image
+        = image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2845599746",size: "49x15", class: "img"
+      .confirmation__change{hover: "$('#confirmation__change').hover();"}
+        = link_to "変更する","", class: "confirmation__change"
+
+  = render "/registrations/registration-footer"

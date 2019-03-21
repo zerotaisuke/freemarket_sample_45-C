@@ -1,0 +1,108 @@
+.main-content
+  = render "/registrations/registration-header"
+  .item-content-area
+    .item-content-area__text 商品の情報を入力
+    = form_with model: @item, local: true do |f|
+      // 出品画像
+      .item-image.box
+        .item-box-header
+          %span.item-box-header__big-title 出品画像
+          %span.item-box-header__must-icon 必須
+        .item-image__infomation
+          最大10枚までアップロードできます
+        .item-image__uploadarea
+          = f.file_field :avatar, style: "display: none", class: "image-upload", id: "image-upload"
+          .item-image__uploadarea-text{onClick: "$('#image-upload').click();"}
+            %p.image-message ドラッグアンドドロップ
+            %p.image-message またはクリックしてファイルをアップロード
+
+      // 商品名
+      .item-data.box
+        .item-box-header
+          %span.item-box-header__small-title 商品名
+          %span.item-box-header__must-icon 必須
+        = f.text_field :name, class: "item-data__name text-field", placeholder: "商品名(必須 40文字まで)"
+        .item-box-header__next
+          %span.item-box-header__small-title 商品説明
+          %span.item-box-header__must-icon 必須
+        = f.text_area :description, class: "item-data__detail text-area", placeholder: "商品の説明（1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+
+      // 商品の詳細
+      .item-detail.box.flexbox
+        .left-side 商品の詳細
+        .right-side
+          .item-box-header
+            %span.item-box-header__small-title カテゴリー
+            %span.item-box-header__must-icon 必須
+          = f.select :category_id, [ 1, 2, 3, 4], {}, {class: "item-detail__category select-field"}
+          .item-box-header__next
+            %span.item-box-header__small-title 商品の状態
+            %span.item-box-header__must-icon 必須
+          = f.select :status, ["---", "新品、未使用", "未使用に近い", "目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"], {}, {class: "item-detail__status select-field"}
+
+      // 配送詳細
+      .item-delivery.box.flexbox
+        .left-side 配送について
+        .right-side
+          .item-box-header
+            %span.item-box-header__small-title 配送料の負担
+            %span.item-box-header__must-icon 必須
+          = f.select :delivery_charge_burden, ["---", "送料込み(出品者負担)", "着払い(購入者負担)"], {}, {class: "item-delivery__fee select-field"}
+          .item-box-header__next
+            %span.item-box-header__small-title 発送元の地域
+            %span.item-box-header__must-icon 必須
+          = f.select :prefecture, ["---", "ここは後日active_hash"], {}, {class: "item-delivary__area select-field"}
+          .item-box-header__next
+            %span.item-box-header__small-title 発送までの日数
+            %span.item-box-header__must-icon 必須
+          = f.select :days_up_to_delivery, ["---","1〜2日で発送","2〜3日で発送","4〜7日で発送"], {}, {class: "item-delivary__days select-field"}
+      // 料金
+      .item-price.box.flexbox
+        .left-side
+          %span 販売価格(300〜9,999,999)
+          %span.fas.fa-question-circle.blue-icon
+        .right-side
+          .right-side-first.flexbox.pad-1
+            .right-side-left
+              .item-box-header
+                %span.item-box-header__small-title 価格
+                %span.item-box-header__must-icon 必須
+            .right-side-right
+              %span.yen-mark ¥
+              = f.text_field :price, placeholder: "例）300", class: "item-price__sell text-field text-field__mini"
+          .right-side-second.flexbox.pad-2.bar
+            .right-side-left
+              %p.fee 販売手数料(10%)
+            .right-side-right
+              .show-tax -
+          .right-side-third.flexbox.pad-2.bar
+            .right-side-left
+              %p.profit.bold 販売利益
+            .right-side-right
+              .show-profit.bold -
+
+      // 注意書きと出品ボタン
+      .attention.box
+        .attention-text
+          .attention
+            %p.attention-1
+              = link_to "禁止されている出品", "https://www.mercari.com/jp/help_center/getting_started/prohibited_items/", class: "no-line"
+              、
+              = link_to "行為", "https://www.mercari.com/jp/help_center/getting_started/prohibited_conduct/", class: "no-line"
+              を必ずご確認ください。
+            %p.attention-2
+              またブランド品でシリアルナンバー等がある場合はご記載ください。
+              = link_to "偽ブランドの販売", "https://www.mercari.com/jp/help_center/getting_started/counterfeit_goods/", class: "no-line"
+              は犯罪であり処罰される可能性があります。
+            %p.attention-3
+              また、出品をもちまして
+              = link_to "加盟店規約", "https://www.mercari.com/jp/seller_terms/", class: "no-line"
+              に同意したことになります。
+        = f.submit "変更する", class: "listing-btn"
+        .return-area
+          = link_to item_path do
+            .return-btn
+              もどる
+
+
+  = render "/registrations/registration-footer"

@@ -1,0 +1,16 @@
+.purchased
+  %h2.purchased__tabHead
+    購入した商品
+  %ul.purchased--mypageTabs
+    = link_to do
+      %li.purchased--mypageTabs__enRoute
+        取引中
+    = link_to do
+      %li.purchased--mypageTabs__settled
+        過去の取引
+  .purchased--tabContent
+    %ul.purchased--tabContent__transactionNow
+      %li.transactionNotFound
+        取引中の商品がありません
+    %ul.purchased--tabContent__transactionOld
+

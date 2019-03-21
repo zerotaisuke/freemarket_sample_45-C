@@ -1,0 +1,99 @@
+.l-side
+  .naviBar
+    %ul.naviBar__naviList
+      = link_to profiles_path do
+        %li.naviBar__naviList__Item
+          マイページ
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          お知らせ
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          やることリスト
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          いいね！一覧
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          出品する
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          出品した商品 - 出品中
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          出品した商品 - 取引中
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          出品した商品 - 売却済み
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          購入した商品 - 取引中
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          購入した商品 - 過去の取引
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          ニュース一覧
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          評価一覧
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          ガイド
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          お問い合わせ
+          %i.fas.fa-chevron-right
+    %h3.naviBar__naviHead メルペイ
+    %ul.naviBar__naviList
+      = link_to do
+        %li.naviBar__naviList__Item
+          売上・振込申請
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          ポイント
+          %i.fas.fa-chevron-right
+    %h3.naviBar__naviHead 設定
+    %ul.naviBar__naviList
+      = link_to profile_path(current_user.id) do
+        %li.naviBar__naviList__Item
+          プロフィール
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          発送元・お届け先住所変更
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          支払い方法
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          メール/パスワード
+          %i.fas.fa-chevron-right
+      = link_to edit_profile_path(current_user.id) do
+        %li.naviBar__naviList__Item
+          本人情報
+          %i.fas.fa-chevron-right
+      = link_to do
+        %li.naviBar__naviList__Item
+          電話番号の確認
+          %i.fas.fa-chevron-right
+      = link_to logout_profiles_path do
+        %li.naviBar__naviList__Item
+          ログアウト
+          %i.fas.fa-chevron-right

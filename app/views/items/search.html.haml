@@ -1,0 +1,142 @@
+= render 'header'
+.search-contents-wrapper
+  %form.search_side_bar
+    %select.side-bar_order__select{:value => "選択肢"}
+      %option{:value => "並び替え"}
+        並び替え
+      %option{:value => "価格の安い順"}
+        価格の安い順
+      %option{:value => "価格の高い順"}
+        価格の高い順
+      %option{:value => "出品の古い順"}
+        出品の古い順
+      %option{:value => "出品の新しい順"}
+        出品の古い順
+
+    .search_side_bar__detail
+      詳細検索
+      .search_side_bar__add-keyword
+        %i.fas.fa-plus
+        キーワードを追加する
+        %input.search_side_bar__input-keyword
+
+      .search_side_bar__select-category
+        %i.fas.fa-list-ul
+        カテゴリーを選択する
+        %select.side-bar_order__category{:value => "選択肢"}
+          %option{:value => "すべて"}
+            すべて
+          %option{:value => "レディース"}
+            レディース
+          %option{:value => "ベビー・キッズ"}
+            ベビーキッズ
+          %option{:value => "インテリア・住まい・小物"}
+            出品の古い順
+          %option{:value => "本・音楽・ゲーム"}
+            本・音楽・ゲーム
+          %option{:value => "家電・スマホ・カメラ"}
+            家電・スマホ・カメラ
+          %option{:value => "ハンドメイド"}
+            ハンドメイド
+          %option{:value => "チケット"}
+            チケット
+          %option{:value => "自転車・オートバイ"}
+            自転車・オートバイ
+          %option{:value => "チケット"}
+            チケット
+          %option{:value => "その他"}
+            その他
+
+      .search_side_bar__brand
+        %i.fas.fa-tags
+        ブランドから探す
+        %input.search_side_bar__input-keyword
+
+      .search_side_bar__size
+        %i.fas.fa-bullseye
+        サイズを指定する
+        %select.side-bar_order__size{:value => "選択肢"}
+          %option{:value => "洋服のサイズ"}
+            洋服のサイズ
+          %option{:value => "メンズ靴のサイズ"}
+            メンズ靴のサイズ
+          %option{:value => "レディース靴のサイズ"}
+            レディース靴のサイズ
+          %option{:value => "スカートのサイズ"}
+            出品の古い順
+          %option{:value => "キッズ服のサイズ"}
+            キッズ服のサイズ
+          %option{:value => "ベビー・キッズ靴のサイズ"}
+            ベビー服のサイズ
+          %option{:value => "テレビのサイズ"}
+            テレビのサイズ
+          %option{:value => "チケット"}
+            カメラレンズのサイズ
+          %option{:value => "自転車・オートバイ"}
+            自転車・オートバイ
+          %option{:value => "オートバイのサイズ"}
+            オートバイのサイズ
+          %option{:value => "ヘルメットのサイズ"}
+            ヘルメットのサイズ
+          %option{:value => "タイヤのサイズ"}
+            タイヤのサイズ
+          %option{:value => "スキーのサイズ"}
+            スキーのサイズ
+          %option{:value => "スノーボードのサイズ"}
+            スノーボードのサイズ
+
+      .search_side_bar__price
+        %i.fas.fa-coins
+        価格
+        %select.side-bar_order__price{:value => "選択肢"}
+          %option{:value => "300~100"}
+            300~1000
+          %option{:value => "1000~5000"}
+            1000~5000
+          %option{:value => "5000~10000"}
+            5000~10000
+          %option{:value => "10000~30000"}
+            10000~30000
+          %option{:value => "30000~50000"}
+            30000~50000
+          %option{:value => "50000~"}
+            50000~
+
+      .search_side_bar__state
+        .item_state
+          %i.fas.fa-star
+          商品の状態
+
+      .search_side_bar__shipping_charges
+        %i.fas.fa-truck
+        配送料の負担
+        .search_side_bar__check-container
+
+      .search_side_bar__trade
+        %i.fas.fa-shopping-cart
+        販売状況
+        .search_side_bar__check-container
+      .search-side_bar__button
+        .search-side_bar__button__clear
+          クリア
+        .search-side_bar__button__completion
+          完了
+
+  %article.section
+    .search_result_container
+      %article.message
+        = "検索結果 1 - #{@items.length} 件"
+        .search_result_container__row
+          - @items.each do |item|
+            .search-new_pickup__category__new__contents_box
+              = image_tag item.avatar, :size => "160x160"
+              .search__item_box_body
+                .search__item_box_body__name
+                  = item.name
+                .search__item_box_body__num
+                  .search__item_box_body__num__price
+                    ="¥#{item.price}"
+                  .search__item_box_body__num__tax (税込)
+
+
+= render 'footer' 

@@ -1,0 +1,32 @@
+.l-side {
+  margin: 40px auto 0;
+  .naviBar{
+    &__naviList{
+      &__Item {
+      position: relative;
+      display: block;
+      height: 16px;
+      min-height: 48px;
+      padding: 16px;
+      background: #fff;
+      color: #333;
+      box-sizing: border-box;
+      border-top: 1px solid #eee;
+      a {
+        text-decoration: none;
+      }
+        .fa-chevron-right {
+          position: absolute;
+          top: 50%;
+          right: 16px;
+          color: #ccc;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+    &__naviHead {
+      margin: 40px 4% 0;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.confirmation{
+  width: 700px;
+  height: 900px;
+  margin: auto;
+  background-color: #FFF;
+
+//購入を確定しますか？
+  &__header{
+    height: 97px;
+    line-height: 97px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: solid 1px;
+    border-color: #f5f5f5;
+  }
+
+//画像と売却金と支払い金額のフィールド作り
+  &__container{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    &__buy-price{
+      text-align: center;
+      margin: 15px 10px;
+      margin-right: 24px;
+    }
+    &__buy-price-cell{
+      text-align: center;
+      margin: 15px 10px;
+      margin-right: 24px;
+      border-bottom: solid 1px;
+      border-color: #f5f5f5;
+    }
+  }
+
+//画像と金額と物品名とボタン
+  &__img{
+    padding: 18px 0;
+  }
+  &__pay{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 22px;
+    margin-right: 10px;
+    text-align: center;
+    &__title{
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 75px;
+    }
+  }
+  &__btn{
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    width: 320px;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 180px;
+    margin-bottom: 30px;
+    background-color:#ea352d;
+
+    &-link{
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    width: 320px;
+    color: #fff;
+    background-color:#ea352d;
+    text-decoration:none;
+    }
+  }
+
+//ポイントと配送料について
+  &__post-margin{
+    display: inline-block;
+    font-size: 14px;
+  }
+  &__point{
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    width: 320px;
+    background-color: #ccc;
+    margin: auto;
+    line-height: 48px;
+  }
+
+//配送先について
+  &__delivery{
+      border-bottom: solid 1px;
+      border-color: #f5f5f5;
+      padding: 10px 185px 40px;
+      line-height: 20px;
+    &__spot{
+      font-weight: bold;
+      font-size: 14px;
+    }
+    &__post{
+      font-size: 12px;
+    }
+    &__adress{
+      font-size: 12px;
+    }
+    &__name{
+      font-size: 12px;
+    }
+  }
+
+//支払い方法について
+  &__payment-method{
+      border-bottom: solid 1px;
+      border-color: #f5f5f5;
+      padding: 10px 185px 40px;
+      line-height: 20px;
+    &__spot{
+      font-weight: bold;
+      font-size: 14px;
+    }
+    &__card-number{
+      font-size: 12px;
+    }
+    &__expiration_date{
+      font-size: 12px;
+    }
+    &__name{
+      font-size: 12px;
+    }
+    &__img{
+      font-size: 12px;
+    }
+  }
+
+//変更するボタン
+  &__change{
+    text-align: right;
+    font-size: 14px;
+    text-decoration: none;
+    color: #71BCF1;
+  }
+  }

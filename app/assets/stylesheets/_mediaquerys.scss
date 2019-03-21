@@ -1,0 +1,48 @@
+@media screen and (min-width: 768px){
+  .l-container {
+    width: 700px;
+    .l-content {
+      float: none;
+      width: 700px;
+      .l-single-inner {
+          padding: 64px;
+      }
+      .personalHead {
+          font-size: 24px;
+          padding: 8px 24px;
+      }
+      .mypageUserIcon {
+        height: 200px;
+      }
+      .purchased__tabHead {
+        padding: 0 16px;
+      }
+      .navibar__navihead {
+        margin: 40px 0 0;
+      }
+    }
+    .l-side {
+      width: 700px;
+    }
+  }
+}
+@media screen and (min-width: 1068px) {
+  .l-container {
+    margin: 40px auto 0;
+    width: 1020px;
+    .l-content {
+      float: right;
+    }
+    .l-side {
+      float: left;
+      width: 280px;
+      margin: 0 40px 0 0;
+    }
+  }
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}

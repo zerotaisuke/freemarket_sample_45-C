@@ -1,0 +1,26 @@
+.main-content
+  = render 'items/header'
+  .category-index__wrapper
+    .category-index__header__conteiner
+      %h2.category-index__header
+        カテゴリー一覧
+      .category-index__lists
+        - @categories.each do |category1|
+          .category-index__list
+            .category-index__list__text
+              =link_to "#{category1.name}","", class: "category-index__list__text"
+      .category-index__box
+        - @categories.each do |category1|
+          .category-index__box__conteiner
+            %h3.category-index__box__parrent-name
+              = "#{category1.name}"
+            .category-index__box__all
+              =link_to "すべて","", class: "category-index__box__all-check"
+              - category1.children.each do |category2|
+                .category-index__box__child-name
+                  = category2.name
+                .category-index__box__grand-child-list
+                  - category2.children.each do |category3|
+                    .category-index__box__grand-child-name
+                      =link_to "#{category3.name}","", class: "category-index__box__grand-child-name"
+  = render 'items/footer'
