@@ -1,0 +1,20 @@
+ul ul {
+  display: none;
+}
+ul li.category:hover > ul {
+  display: block;
+}
+ul.category{
+ @include height_width(20px,300px);
+ border: solid 1px black;
+ z-index: 1000;
+ background-color: #FFFFFF;
+}
+li.category{
+  @include height_width(20px,300px);
+ border: solid 1px black;
+ z-index: 1000;
+ background-color: #FFFFFF;
+ // display: block;
+
+}
