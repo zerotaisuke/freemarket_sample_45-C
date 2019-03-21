@@ -53,6 +53,7 @@
 
     // #クレジットカードロゴ部分
     &__signup-card-logo{
+      display: flex;
       &--visa{
         @include height_width(20px,34px);
       }
