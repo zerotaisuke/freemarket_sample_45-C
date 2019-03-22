@@ -352,11 +352,7 @@ p.comment{
     @include height_width(48px,181px);
     padding-top:20px;
     box-sizing: border-box;
-<<<<<<< HEAD
-  }
-=======
 
->>>>>>> ryo-kamido/master
     &__num{
       color:$black;
       @include height_width(30px,165.23px);
@@ -367,11 +363,6 @@ p.comment{
         font-size: 16px;
         color:$black;
         @include height_width(20px,inherit);
-<<<<<<< HEAD
-    }
-  }
-}
-=======
       }
     }
   }
@@ -379,6 +370,3 @@ p.comment{
 .soldOut{
   background-color: gray;
 }
-
-
->>>>>>> ryo-kamido/master
