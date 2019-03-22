@@ -1,75 +1,92 @@
-= render "items/header"
+.main-content
+  = render "items/header"
+  = render "items/breadcrumbs-profile"
+  / profiles
+  / - breadcrumb :profiles
+  / = breadcrumbs separator: " &rsaquo; "
 
-.l-container.clearfix
-  .l-content
-    %h2.l-content__credithead クレジットカード情報入力
-    .l-content__form-all
-      .l-content__editingscreen
-        .form-group
-          %label.form-group__toptext カード番号
-          %span.form-group__form-require 必須
-          %input#payment_card_no.form-group__input-default{"data-input-type" => "card", :maxlength => "19", :placeholder => "半角数字のみ", :type => "text", :value => ""}/
-          %ul.form-group__signup-card-logo
-            %li
-              = image_tag("credit_logo/visa_logo.svg",class:'form-group__signup-card-logo--visa')
-            %li
-              = image_tag("credit_logo/master-card.svg",class:'form-group__signup-card-logo--master')
-            %li
-              = image_tag("credit_logo/saison-card.svg",class:'form-group__signup-card-logo--saison')
-            %li
-              = image_tag("credit_logo/jcb.svg",class:'form-group__signup-card-logo--jcb')
-            %li
-              = image_tag("credit_logo/american_express.svg",class:'form-group__signup-card-logo--american')
-            %li
-              = image_tag("credit_logo/dinersclub.svg",class:'form-group__signup-card-logo--dinersclub')
-            %li
-              = image_tag("credit_logo/discover.svg",class:'form-group__signup-card-logo--discover')
-        .form-group
-          .form-group__expiration_date
-          %label.form-group__toptext{:for => "payment_card_expire"} 有効期限
-          %span.form-group__form-require 必須
-          %br/
-          .form-group__expiration_date_monthyear
-            %select#payment_card_expire_mm.form-group__expiration_date_monthyear--select-default
-              %option{:value => "01"} 01
-              %option{:value => "02"} 02
-              %option{:value => "03"} 03
-              %option{:value => "04"} 04
-              %option{:value => "05"} 05
-              %option{:value => "06"} 06
-              %option{:value => "07"} 07
-              %option{:value => "08"} 08
-              %option{:value => "09"} 09
-              %option{:value => "10"} 10
-              %option{:value => "11"} 11
-              %option{:value => "12"} 12
-            %i.icon-arrow-bottom
-          %span.form-group__monthyeartext 月
-          %ul#expire-mm-error-wrapper.has-error-text
-          .form-group__expiration_date_monthyear
-            %select#payment_card_expire_yy.form-group__expiration_date_monthyear--select-default
-              %option{:value => "19"} 19
-              %option{:value => "20"} 20
-              %option{:value => "21"} 21
-              %option{:value => "22"} 22
-              %option{:value => "23"} 23
-              %option{:value => "24"} 24
-              %option{:value => "25"} 25
-              %option{:value => "26"} 26
-              %option{:value => "27"} 27
-              %option{:value => "28"} 28
-              %option{:value => "29"} 29
-            %i.icon-arrow-bottom
-          %span.form-group__monthyeartext 年
-        .form-group
-          %label.form-group__toptext セキュリティコード
-          %span.form-group__form-require 必須
-          %input#payment_card_security_code.form-group__input-default{:placeholder => "カード背面4桁もしくは3桁の番号", :type => "number", :value => ""}/
-          %ul#security-code-error-wrapper.has-error-text
-          .signup-seqcode
-            .form-group__signup-seqcode-text
-              %span.form-group__form-question> ?
-              カード裏面の番号とは？
-        %button#submit-button.form-group__btn-default.btn-red{:type => "button"} 追加する
-  = render "l-side"
+  / categories
+  / - breadcrumb :categories
+  / = breadcrumbs separator: " &rsaquo; ", class: 'a', current_class: 'b'
+
+  / profile
+  / - breadcrumb :profile, @crumb_name
+  / = breadcrumbs separator: " &rsaquo; "
+
+  / categorie
+  / - breadcrumb :categorie, @categorie
+  / = breadcrumbs separator: " &rsaquo; "
+
+  .l-container.clearfix
+    .l-content
+      %h2.l-content__credithead クレジットカード情報入力
+      .l-content__form-all
+        .l-content__editingscreen
+          .form-group
+            %label.form-group__toptext カード番号
+            %span.form-group__form-require 必須
+            %input#payment_card_no.form-group__input-default{"data-input-type" => "card", :maxlength => "19", :placeholder => "半角数字のみ", :type => "text", :value => ""}/
+            %ul.form-group__signup-card-logo
+              %li
+                = image_tag("credit_logo/visa_logo.svg",class:'form-group__signup-card-logo--visa')
+              %li
+                = image_tag("credit_logo/master-card.svg",class:'form-group__signup-card-logo--master')
+              %li
+                = image_tag("credit_logo/saison-card.svg",class:'form-group__signup-card-logo--saison')
+              %li
+                = image_tag("credit_logo/jcb.svg",class:'form-group__signup-card-logo--jcb')
+              %li
+                = image_tag("credit_logo/american_express.svg",class:'form-group__signup-card-logo--american')
+              %li
+                = image_tag("credit_logo/dinersclub.svg",class:'form-group__signup-card-logo--dinersclub')
+              %li
+                = image_tag("credit_logo/discover.svg",class:'form-group__signup-card-logo--discover')
+          .form-group
+            .form-group__expiration_date
+            %label.form-group__toptext{:for => "payment_card_expire"} 有効期限
+            %span.form-group__form-require 必須
+            %br/
+            .form-group__expiration_date_monthyear
+              %select#payment_card_expire_mm.form-group__expiration_date_monthyear--select-default
+                %option{:value => "01"} 01
+                %option{:value => "02"} 02
+                %option{:value => "03"} 03
+                %option{:value => "04"} 04
+                %option{:value => "05"} 05
+                %option{:value => "06"} 06
+                %option{:value => "07"} 07
+                %option{:value => "08"} 08
+                %option{:value => "09"} 09
+                %option{:value => "10"} 10
+                %option{:value => "11"} 11
+                %option{:value => "12"} 12
+              %i.icon-arrow-bottom
+            %span.form-group__monthyeartext 月
+            %ul#expire-mm-error-wrapper.has-error-text
+            .form-group__expiration_date_monthyear
+              %select#payment_card_expire_yy.form-group__expiration_date_monthyear--select-default
+                %option{:value => "19"} 19
+                %option{:value => "20"} 20
+                %option{:value => "21"} 21
+                %option{:value => "22"} 22
+                %option{:value => "23"} 23
+                %option{:value => "24"} 24
+                %option{:value => "25"} 25
+                %option{:value => "26"} 26
+                %option{:value => "27"} 27
+                %option{:value => "28"} 28
+                %option{:value => "29"} 29
+              %i.icon-arrow-bottom
+            %span.form-group__monthyeartext 年
+          .form-group
+            %label.form-group__toptext セキュリティコード
+            %span.form-group__form-require 必須
+            %input#payment_card_security_code.form-group__input-default{:placeholder => "カード背面4桁もしくは3桁の番号", :type => "number", :value => ""}/
+            %ul#security-code-error-wrapper.has-error-text
+            .signup-seqcode
+              .form-group__signup-seqcode-text
+                %span.form-group__form-question> ?
+                カード裏面の番号とは？
+          %button#submit-button.form-group__btn-default.btn-red{:type => "button"} 追加する
+    = render "l-side"
 = render "items/footer"
