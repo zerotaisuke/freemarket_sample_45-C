@@ -66,6 +66,19 @@
 }
 
 // アイテム欄個別
+
+.new_pickup__category__new-image{
+   @include height_width(213px,100%);
+    text-align: center;
+}
+.thumnail-box{
+  max-width: 100%;
+  min-height: 213px;
+  max-height: 213px;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
 .item_box_body{
   @include height_width(117px,200px);
   margin-left:20px;
@@ -78,12 +91,14 @@
     @include height_width(48px,181px);
     padding-top:20px;
     box-sizing: border-box;
+    text-align: left !important;
   }
     &__num{
       color:$black;
       @include height_width(30px,165.23px);
       position:absolute;
       bottom:20px;
+      text-align: left !important;
 
       &__price{
         font-size: 16px;
@@ -105,6 +120,7 @@
      }
   }
 }
+
 
 #slide-top-banner {
   width: 100vw;
